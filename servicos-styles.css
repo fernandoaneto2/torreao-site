@@ -1,0 +1,447 @@
+/* ===== SERVIÇOS PAGE SPECIFIC STYLES ===== */
+
+/* Hero Section */
+.servicos-hero {
+  background: linear-gradient(135deg, var(--color-black) 0%, #1a1a1a 100%);
+  color: var(--color-white);
+  padding: 100px 20px;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.servicos-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(139, 58, 58, 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+.hero-content-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.servicos-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.servicos-hero p {
+  font-size: 1.2rem;
+  color: var(--color-gray);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background-color: var(--color-light-gray);
+  padding: 1rem 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.breadcrumb .container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: var(--color-wine);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-wine-dark);
+}
+
+.breadcrumb span {
+  color: var(--color-gray);
+}
+
+/* Services Overview */
+.services-overview {
+  padding: 80px 20px;
+  background-color: var(--color-white);
+}
+
+.services-overview h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+  text-align: center;
+}
+
+.services-overview .section-subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-quick-card {
+  background-color: var(--color-light-gray);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.service-quick-card:hover {
+  border-color: var(--color-wine);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  background-color: rgba(139, 58, 58, 0.05);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service-quick-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-black);
+}
+
+.service-quick-card p {
+  color: var(--color-dark-gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Services Detailed */
+.services-detailed {
+  padding: 60px 20px;
+  background-color: var(--color-white);
+}
+
+.service-detail-card {
+  background-color: var(--color-light-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid var(--color-wine);
+}
+
+.service-detail-card:hover {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-detail-header {
+  background: linear-gradient(135deg, var(--color-black) 0%, #1a1a1a 100%);
+  color: var(--color-white);
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.service-detail-icon {
+  font-size: 4rem;
+  flex-shrink: 0;
+}
+
+.service-detail-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-white);
+}
+
+.service-category {
+  color: var(--color-wine);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.service-detail-content {
+  padding: 3rem 2rem;
+}
+
+.detail-section {
+  margin-bottom: 3rem;
+}
+
+.detail-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+  border-bottom: 2px solid var(--color-wine);
+  padding-bottom: 0.5rem;
+}
+
+.detail-section p {
+  color: var(--color-dark-gray);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Detail List */
+.detail-list {
+  list-style: none;
+}
+
+.detail-list li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: var(--color-white);
+  border-left: 3px solid var(--color-wine);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.detail-list li:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transform: translateX(5px);
+}
+
+.detail-list strong {
+  color: var(--color-black);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.detail-list span {
+  color: var(--color-dark-gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--color-white);
+  border-radius: 6px;
+  border-left: 3px solid var(--color-wine);
+}
+
+.benefit-icon {
+  color: var(--color-wine);
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.benefit-item span {
+  color: var(--color-dark-gray);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Process Timeline */
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-top: 3px solid var(--color-wine);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.timeline-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-wine);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-item h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-black);
+}
+
+.timeline-item p {
+  color: var(--color-dark-gray);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Related Projects */
+.related-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.project-item {
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--color-wine);
+  color: var(--color-dark-gray);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover {
+  background-color: rgba(139, 58, 58, 0.05);
+  transform: translateX(5px);
+}
+
+/* Detail CTA */
+.detail-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.detail-cta button {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servicos-hero h1 {
+    font-size: 2rem;
+  }
+
+  .service-detail-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .service-detail-icon {
+    font-size: 2.5rem;
+  }
+
+  .service-detail-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-detail-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .detail-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .services-quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .related-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-cta {
+    flex-direction: column;
+  }
+
+  .detail-cta button {
+    width: 100%;
+  }
+
+  .breadcrumb .container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicos-hero {
+    padding: 60px 20px;
+  }
+
+  .servicos-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .servicos-hero p {
+    font-size: 1rem;
+  }
+
+  .service-detail-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .service-detail-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .detail-section {
+    margin-bottom: 2rem;
+  }
+
+  .services-overview {
+    padding: 40px 20px;
+  }
+
+  .services-overview h2 {
+    font-size: 1.8rem;
+  }
+
+  .services-detailed {
+    padding: 40px 20px;
+  }
+}

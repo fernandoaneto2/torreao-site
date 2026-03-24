@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviços - Torreão Engenharia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="servicos-styles.css" />
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <span class="logo-text">Torreão</span>
+        </div>
+        <nav class="navbar-menu" id="navbarMenu">
+          <a href="index.html#inicio" class="nav-link">Início</a>
+          <a href="index.html#sobre" class="nav-link">Sobre</a>
+          <a href="servicos.html" class="nav-link">Serviços</a>
+          <a href="index.html#projetos" class="nav-link">Projetos</a>
+          <a href="index.html#processo" class="nav-link">Processo</a>
+          <a href="index.html#depoimentos" class="nav-link">Depoimentos</a>
+          <a href="index.html#contato" class="nav-link">Contato</a>
+        </nav>
+        <div class="navbar-right">
+          <a href="tel:+5511999999999" class="phone-link">
+            <span class="phone-icon">📞</span>
+            (11) 9 9999-9999
+          </a>
+          <button class="btn-primary navbar-cta">SOLICITAR ORÇAMENTO</button>
+        </div>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="servicos-hero">
+      <div class="container">
+        <div class="hero-content-text">
+          <h1>Nossos Serviços</h1>
+          <p>
+            Soluções completas em engenharia civil com expertise técnica e
+            excelência em cada projeto
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <div class="container">
+        <a href="index.html">Início</a>
+        <span>/</span>
+        <span>Serviços</span>
+      </div>
+    </nav>
+
+    <!-- Services Grid Overview -->
+    <section class="services-overview">
+      <div class="container">
+        <h2>Áreas de Especialização</h2>
+        <p class="section-subtitle">
+          Conheça todos os nossos serviços e escolha a solução ideal para seu
+          projeto
+        </p>
+
+        <div class="services-quick-grid">
+          <div
+            class="service-quick-card"
+            onclick="scrollToService('estrutural')"
+          >
+            <div class="service-icon">🏗️</div>
+            <h3>Projetos Estruturais</h3>
+            <p>Cálculo e dimensionamento com tecnologia BIM</p>
+          </div>
+          <div class="service-quick-card" onclick="scrollToService('gestao')">
+            <div class="service-icon">📋</div>
+            <h3>Gestão de Obras</h3>
+            <p>Gerenciamento completo de projetos</p>
+          </div>
+          <div
+            class="service-quick-card"
+            onclick="scrollToService('arquitetonico')"
+          >
+            <div class="service-icon">🎨</div>
+            <h3>Projetos Arquitetônicos</h3>
+            <p>Design funcional e estético</p>
+          </div>
+          <div
+            class="service-quick-card"
+            onclick="scrollToService('consultoria')"
+          >
+            <div class="service-icon">💼</div>
+            <h3>Consultorias Técnicas</h3>
+            <p>Laudos, perícias e consultoria especializada</p>
+          </div>
+          <div class="service-quick-card" onclick="scrollToService('reforma')">
+            <div class="service-icon">🔨</div>
+            <h3>Reformas e Retrofit</h3>
+            <p>Modernização de edificações</p>
+          </div>
+          <div class="service-quick-card" onclick="scrollToService('bim')">
+            <div class="service-icon">💻</div>
+            <h3>BIM & Tecnologia</h3>
+            <p>Modelagem digital completa</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Services Section -->
+    <section class="services-detailed">
+      <div class="container">
+        <!-- Serviço 1: Projetos Estruturais -->
+        <div class="service-detail-card" id="estrutural">
+          <div class="service-detail-header">
+            <div class="service-detail-icon">🏗️</div>
+            <div class="service-detail-title">
+              <h2>Projetos Estruturais</h2>
+              <p class="service-category">Mais Contratado</p>
+            </div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="detail-section">
+              <h3>Descrição Geral</h3>
+              <p>
+                Projetos estruturais de alta performance com cálculo e
+                dimensionamento utilizando tecnologia BIM de última geração.
+                Atendemos edificações de todos os portes, desde residências até
+                grandes complexos comerciais e industriais.
+              </p>
+            </div>
+
+            <div class="detail-section">
+              <h3>Especialidades</h3>
+              <ul class="detail-list">
+                <li>
+                  <strong>Concreto Armado e Protendido</strong>
+                  <span
+                    >Estruturas em concreto com alta resistência e durabilidade,
+                    incluindo sistemas protendidos para grandes vãos</span
+                  >
+                </li>
+                <li>
+                  <strong>Estruturas Metálicas</strong>
+                  <span
+                    >Projetos em aço com análise avançada, otimização de custos
+                    e execução eficiente</span
+                  >
+                </li>
+                <li>
+                  <strong>Fundações Especiais</strong>
+                  <span
+                    >Estacas hélice contínua, tubulões, sapatas especiais e
+                    soluções para solos complexos</span
+                  >
+                </li>
+                <li>
+                  <strong>Estruturas Mistas</strong>
+                  <span
+                    >Combinação de aço e concreto para máxima eficiência
+                    estrutural</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="detail-section">
+              <h3>Benefícios</h3>
+              <div class="benefits-grid">
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Tecnologia BIM integrada</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Otimização de custos</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Garantia de 5 anos</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Análise estrutural avançada</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Processo</h3>
+              <div class="process-timeline">
+                <div class="timeline-item">
+                  <span class="timeline-number">1</span>
+                  <h4>Levantamento de Dados</h4>
+                  <p>
+                    Coleta de informações do terreno, cargas e requisitos do
+                    projeto
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">2</span>
+                  <h4>Análise Estrutural</h4>
+                  <p>Modelagem 3D e cálculos com softwares de ponta</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">3</span>
+                  <h4>Dimensionamento</h4>
+                  <p>Otimização e dimensionamento de elementos estruturais</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">4</span>
+                  <h4>Documentação</h4>
+                  <p>Projeto executivo completo com detalhes construtivos</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Projetos Relacionados</h3>
+              <div class="related-projects">
+                <div class="project-item">
+                  Residencial Vista Nobre - 4.200 m²
+                </div>
+                <div class="project-item">
+                  Centro Empresarial Torino - 12.000 m²
+                </div>
+                <div class="project-item">
+                  Galpão Logístico Norte - 8.500 m²
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-cta">
+              <button class="btn-primary">SOLICITAR ORÇAMENTO</button>
+              <button class="btn-secondary">SAIBA MAIS</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 2: Gestão de Obras -->
+        <div class="service-detail-card" id="gestao">
+          <div class="service-detail-header">
+            <div class="service-detail-icon">📋</div>
+            <div class="service-detail-title">
+              <h2>Gestão de Obras</h2>
+              <p class="service-category">Gerenciamento Completo</p>
+            </div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="detail-section">
+              <h3>Descrição Geral</h3>
+              <p>
+                Gerenciamento completo de obras civis com controle rigoroso de
+                prazo, qualidade e custos. Nossa equipe acompanha cada etapa da
+                construção, garantindo transparência, segurança e cumprimento de
+                cronograma.
+              </p>
+            </div>
+
+            <div class="detail-section">
+              <h3>Especialidades</h3>
+              <ul class="detail-list">
+                <li>
+                  <strong>Cronograma Físico-Financeiro</strong>
+                  <span
+                    >Planejamento detalhado com controle de fluxo de caixa e
+                    desembolsos</span
+                  >
+                </li>
+                <li>
+                  <strong>Controle de Qualidade</strong>
+                  <span
+                    >Inspeção rigorosa em todas as etapas construtivas com
+                    documentação completa</span
+                  >
+                </li>
+                <li>
+                  <strong>Gestão de Fornecedores</strong>
+                  <span
+                    >Coordenação de materiais, equipamentos e mão de obra
+                    especializada</span
+                  >
+                </li>
+                <li>
+                  <strong>Segurança do Trabalho</strong>
+                  <span
+                    >Implementação de protocolos de segurança e prevenção de
+                    acidentes</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="detail-section">
+              <h3>Benefícios</h3>
+              <div class="benefits-grid">
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>98% de pontualidade</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Redução de custos até 30%</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Transparência total</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Relatórios periódicos</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Processo</h3>
+              <div class="process-timeline">
+                <div class="timeline-item">
+                  <span class="timeline-number">1</span>
+                  <h4>Planejamento</h4>
+                  <p>Elaboração de cronograma e orçamento detalhado</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">2</span>
+                  <h4>Mobilização</h4>
+                  <p>Preparação do canteiro e contratação de fornecedores</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">3</span>
+                  <h4>Execução</h4>
+                  <p>Acompanhamento diário com controle de qualidade</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">4</span>
+                  <h4>Entrega</h4>
+                  <p>Vistoria final e documentação completa</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Projetos Relacionados</h3>
+              <div class="related-projects">
+                <div class="project-item">
+                  Village Exclusive - Fase II - 6.800 m²
+                </div>
+                <div class="project-item">
+                  Residencial Vista Nobre - 4.200 m²
+                </div>
+                <div class="project-item">
+                  Centro Empresarial Torino - 12.000 m²
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-cta">
+              <button class="btn-primary">SOLICITAR ORÇAMENTO</button>
+              <button class="btn-secondary">SAIBA MAIS</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 3: Projetos Arquitetônicos -->
+        <div class="service-detail-card" id="arquitetonico">
+          <div class="service-detail-header">
+            <div class="service-detail-icon">🎨</div>
+            <div class="service-detail-title">
+              <h2>Projetos Arquitetônicos</h2>
+              <p class="service-category">Design e Funcionalidade</p>
+            </div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="detail-section">
+              <h3>Descrição Geral</h3>
+              <p>
+                Projetos arquitetônicos que combinam design funcional e estético
+                com integração perfeita ao projeto de engenharia. Do conceito
+                inicial até a obra finalizada, criamos espaços que refletem a
+                visão do cliente.
+              </p>
+            </div>
+
+            <div class="detail-section">
+              <h3>Especialidades</h3>
+              <ul class="detail-list">
+                <li>
+                  <strong>Plantas e Cortes Técnicos</strong>
+                  <span
+                    >Documentação arquitetônica completa com detalhes
+                    construtivos</span
+                  >
+                </li>
+                <li>
+                  <strong>Renderização 3D</strong>
+                  <span
+                    >Visualizações realistas do projeto antes da execução</span
+                  >
+                </li>
+                <li>
+                  <strong>Projeto Executivo</strong>
+                  <span
+                    >Documentação completa para construção com especificações
+                    técnicas</span
+                  >
+                </li>
+                <li>
+                  <strong>Interiores e Acabamentos</strong>
+                  <span
+                    >Projeto de ambientes internos com especificação de
+                    materiais</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="detail-section">
+              <h3>Benefícios</h3>
+              <div class="benefits-grid">
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Visualização prévia 3D</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Design personalizado</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Otimização de espaços</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Sustentabilidade integrada</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Processo</h3>
+              <div class="process-timeline">
+                <div class="timeline-item">
+                  <span class="timeline-number">1</span>
+                  <h4>Conceituação</h4>
+                  <p>Discussão de ideias e criação de conceitos iniciais</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">2</span>
+                  <h4>Anteprojeto</h4>
+                  <p>Desenvolvimento de soluções com primeiras renderizações</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">3</span>
+                  <h4>Projeto Legal</h4>
+                  <p>Adequação às normas e aprovação em órgãos competentes</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">4</span>
+                  <h4>Projeto Executivo</h4>
+                  <p>Documentação final com detalhes para construção</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Projetos Relacionados</h3>
+              <div class="related-projects">
+                <div class="project-item">
+                  Retrofit Edifício Alameda - 2.100 m²
+                </div>
+                <div class="project-item">
+                  Centro Empresarial Torino - 12.000 m²
+                </div>
+                <div class="project-item">
+                  Residencial Vista Nobre - 4.200 m²
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-cta">
+              <button class="btn-primary">SOLICITAR ORÇAMENTO</button>
+              <button class="btn-secondary">SAIBA MAIS</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 4: Consultorias Técnicas -->
+        <div class="service-detail-card" id="consultoria">
+          <div class="service-detail-header">
+            <div class="service-detail-icon">💼</div>
+            <div class="service-detail-title">
+              <h2>Consultorias Técnicas</h2>
+              <p class="service-category">Expertise Especializada</p>
+            </div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="detail-section">
+              <h3>Descrição Geral</h3>
+              <p>
+                Laudos, perícias e consultoria especializada para decisões
+                seguras e embasadas. Nossa equipe de especialistas oferece
+                análises técnicas profundas para resolver problemas complexos em
+                engenharia civil.
+              </p>
+            </div>
+
+            <div class="detail-section">
+              <h3>Especialidades</h3>
+              <ul class="detail-list">
+                <li>
+                  <strong>Laudos Periciais</strong>
+                  <span
+                    >Análise técnica para fins judiciais e administrativos</span
+                  >
+                </li>
+                <li>
+                  <strong>Vistoria de Imóveis</strong>
+                  <span
+                    >Inspeção completa com identificação de problemas
+                    estruturais</span
+                  >
+                </li>
+                <li>
+                  <strong>Avaliação Patrimonial</strong>
+                  <span
+                    >Determinação de valor técnico de imóveis e estruturas</span
+                  >
+                </li>
+                <li>
+                  <strong>Consultoria Técnica Especializada</strong>
+                  <span
+                    >Orientação em projetos complexos e soluções
+                    inovadoras</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="detail-section">
+              <h3>Benefícios</h3>
+              <div class="benefits-grid">
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Expertise comprovada</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Relatórios detalhados</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Suporte legal</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Análise imparcial</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Processo</h3>
+              <div class="process-timeline">
+                <div class="timeline-item">
+                  <span class="timeline-number">1</span>
+                  <h4>Briefing</h4>
+                  <p>Entendimento completo da demanda e objetivos</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">2</span>
+                  <h4>Investigação</h4>
+                  <p>Coleta de dados, vistorias e análises técnicas</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">3</span>
+                  <h4>Análise</h4>
+                  <p>Avaliação técnica profunda dos achados</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">4</span>
+                  <h4>Relatório</h4>
+                  <p>Documentação técnica com conclusões e recomendações</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Projetos Relacionados</h3>
+              <div class="related-projects">
+                <div class="project-item">
+                  Retrofit Edifício Alameda - 2.100 m²
+                </div>
+                <div class="project-item">
+                  Viaduto Municipal BR-153 - 1.200 m²
+                </div>
+                <div class="project-item">
+                  Galpão Logístico Norte - 8.500 m²
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-cta">
+              <button class="btn-primary">SOLICITAR ORÇAMENTO</button>
+              <button class="btn-secondary">SAIBA MAIS</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 5: Reformas e Retrofit -->
+        <div class="service-detail-card" id="reforma">
+          <div class="service-detail-header">
+            <div class="service-detail-icon">🔨</div>
+            <div class="service-detail-title">
+              <h2>Reformas e Retrofit</h2>
+              <p class="service-category">Modernização e Renovação</p>
+            </div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="detail-section">
+              <h3>Descrição Geral</h3>
+              <p>
+                Modernização e reforma de edificações com soluções criativas e
+                seguras. Transformamos estruturas antigas em espaços modernos,
+                funcionais e eficientes energeticamente, mantendo a integridade
+                estrutural.
+              </p>
+            </div>
+
+            <div class="detail-section">
+              <h3>Especialidades</h3>
+              <ul class="detail-list">
+                <li>
+                  <strong>Retrofit Estrutural</strong>
+                  <span>Reforço e modernização de estruturas existentes</span>
+                </li>
+                <li>
+                  <strong>Fachadas e Revestimentos</strong>
+                  <span
+                    >Renovação de fachadas com materiais modernos e
+                    duráveis</span
+                  >
+                </li>
+                <li>
+                  <strong>Adequações Normativas</strong>
+                  <span
+                    >Atualização de estruturas para conformidade com normas
+                    atuais</span
+                  >
+                </li>
+                <li>
+                  <strong>Eficiência Energética</strong>
+                  <span
+                    >Implementação de sistemas sustentáveis e economia de
+                    energia</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="detail-section">
+              <h3>Benefícios</h3>
+              <div class="benefits-grid">
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Modernização completa</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Sustentabilidade</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Valorização do imóvel</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Redução de custos operacionais</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Processo</h3>
+              <div class="process-timeline">
+                <div class="timeline-item">
+                  <span class="timeline-number">1</span>
+                  <h4>Diagnóstico</h4>
+                  <p>Avaliação completa da estrutura existente</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">2</span>
+                  <h4>Projeto de Retrofit</h4>
+                  <p>Desenvolvimento de soluções de modernização</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">3</span>
+                  <h4>Execução</h4>
+                  <p>Obra com mínima interrupção das atividades</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">4</span>
+                  <h4>Entrega</h4>
+                  <p>Estrutura modernizada e funcional</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Projetos Relacionados</h3>
+              <div class="related-projects">
+                <div class="project-item">
+                  Retrofit Edifício Alameda - 2.100 m²
+                </div>
+                <div class="project-item">
+                  Residencial Vista Nobre - 4.200 m²
+                </div>
+                <div class="project-item">
+                  Centro Empresarial Torino - 12.000 m²
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-cta">
+              <button class="btn-primary">SOLICITAR ORÇAMENTO</button>
+              <button class="btn-secondary">SAIBA MAIS</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 6: BIM & Tecnologia -->
+        <div class="service-detail-card" id="bim">
+          <div class="service-detail-header">
+            <div class="service-detail-icon">💻</div>
+            <div class="service-detail-title">
+              <h2>BIM & Tecnologia</h2>
+              <p class="service-category">Inovação Digital</p>
+            </div>
+          </div>
+
+          <div class="service-detail-content">
+            <div class="detail-section">
+              <h3>Descrição Geral</h3>
+              <p>
+                Modelagem digital completa com Building Information Modeling
+                (BIM) para projetos integrados. Utilizamos as mais avançadas
+                tecnologias para otimizar planejamento, execução e manutenção de
+                projetos.
+              </p>
+            </div>
+
+            <div class="detail-section">
+              <h3>Especialidades</h3>
+              <ul class="detail-list">
+                <li>
+                  <strong>Modelagem Revit</strong>
+                  <span
+                    >Criação de modelos 3D parametrizados com todas as
+                    disciplinas</span
+                  >
+                </li>
+                <li>
+                  <strong>Clash Detection</strong>
+                  <span
+                    >Detecção automática de conflitos entre disciplinas</span
+                  >
+                </li>
+                <li>
+                  <strong>Quantitativos BIM</strong>
+                  <span
+                    >Extração automática de quantidades para orçamentação
+                    precisa</span
+                  >
+                </li>
+                <li>
+                  <strong>Gêmeos Digitais</strong>
+                  <span
+                    >Representação digital completa para operação e
+                    manutenção</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="detail-section">
+              <h3>Benefícios</h3>
+              <div class="benefits-grid">
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Redução de erros</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Melhor coordenação</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Orçamentos precisos</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon">✓</span>
+                  <span>Visualização 3D completa</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Processo</h3>
+              <div class="process-timeline">
+                <div class="timeline-item">
+                  <span class="timeline-number">1</span>
+                  <h4>Modelagem</h4>
+                  <p>Criação de modelo BIM com todas as disciplinas</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">2</span>
+                  <h4>Coordenação</h4>
+                  <p>Clash detection e resolução de conflitos</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">3</span>
+                  <h4>Análise</h4>
+                  <p>Simulações e otimizações do projeto</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-number">4</span>
+                  <h4>Documentação</h4>
+                  <p>Extração de desenhos, quantitativos e relatórios</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Projetos Relacionados</h3>
+              <div class="related-projects">
+                <div class="project-item">
+                  Centro Empresarial Torino - 12.000 m²
+                </div>
+                <div class="project-item">
+                  Residencial Vista Nobre - 4.200 m²
+                </div>
+                <div class="project-item">
+                  Galpão Logístico Norte - 8.500 m²
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-cta">
+              <button class="btn-primary">SOLICITAR ORÇAMENTO</button>
+              <button class="btn-secondary">SAIBA MAIS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Pronto para transformar seu projeto?</h2>
+        <p>
+          Converse com nossos especialistas e descubra a melhor solução para sua
+          obra
+        </p>
+        <button class="btn-primary btn-large">
+          SOLICITAR ORÇAMENTO GRATUITO
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Engenharia civil de alta performance</h4>
+            <p>
+              Projetos, execução e consultoria que transformam ambições em
+              realidade.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4>SERVIÇOS</h4>
+            <ul>
+              <li><a href="#estrutural">Projetos Estruturais</a></li>
+              <li><a href="#gestao">Gestão de Obras</a></li>
+              <li><a href="#arquitetonico">Projetos Arquitetônicos</a></li>
+              <li><a href="#consultoria">Consultoria Técnica</a></li>
+              <li><a href="#reforma">Reformas e Retrofit</a></li>
+              <li><a href="#bim">BIM & Tecnologia</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>NAVEGAÇÃO</h4>
+            <ul>
+              <li><a href="index.html#inicio">Início</a></li>
+              <li><a href="index.html#sobre">Sobre</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="index.html#projetos">Projetos</a></li>
+              <li><a href="index.html#processo">Processo</a></li>
+              <li><a href="index.html#depoimentos">Depoimentos</a></li>
+              <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>CONTATO</h4>
+            <ul>
+              <li><a href="tel:+5511999999999">(11) 9 9999-9999</a></li>
+              <li>
+                <a href="mailto:contato@torreaoengenharia.com.br"
+                  >contato@torreaoengenharia.com.br</a
+                >
+              </li>
+              <li>Av. Paulista, 1000<br />São Paulo, SP</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Torreão Engenharia. Todos os direitos reservados.</p>
+          <div class="footer-links">
+            <a href="#">Política de Privacidade</a>
+            <span>CREA-SP 000.000-0</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal para CTA -->
+    <div class="modal" id="ctaModal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h2>Solicitar Orçamento Gratuito</h2>
+        <form class="modal-form" id="modalForm">
+          <div class="form-group">
+            <input type="text" placeholder="Nome Completo *" required />
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Telefone / WhatsApp *" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="E-mail *" required />
+          </div>
+          <div class="form-group">
+            <select required>
+              <option value="">Selecione um serviço...</option>
+              <option value="estrutural">Projeto Estrutural</option>
+              <option value="gestao">Gestão de Obra</option>
+              <option value="arquitetonico">Projeto Arquitetônico</option>
+              <option value="consultoria">Consultoria Técnica</option>
+              <option value="reforma">Reforma / Retrofit</option>
+              <option value="bim">BIM & Tecnologia</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea
+              placeholder="Descreva seu projeto..."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-primary">
+            SOLICITAR ORÇAMENTO GRATUITO
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="servicos-script.js"></script>
+  </body>
+</html>
