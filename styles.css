@@ -44,7 +44,7 @@ body {
   right: 0;
   background-color: var(--color-black);
   color: var(--color-white);
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
@@ -59,17 +59,37 @@ body {
 }
 
 .navbar-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-white);
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
 .logo-link:hover {
   /* Aumenta a escala em 10% sem desalinhamento */
-  transform: scale(1.1);
+  transform: scale(1.05);
 
   /* Opcional: Adiciona um leve brilho ou nitidez */
   filter: brightness(1.1);
+}
+
+.logo {
+  width: 100%;
+  max-width: 160px; /* Entre 140px e 180px */
+  height: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 120px; /* Entre 100px e 130px */
+  }
 }
 
 .logo-text {
@@ -142,6 +162,9 @@ body {
 }
 
 /* ===== BUTTONS ===== */
+
+/* BOTOES PRINCIPAIS */
+
 .btn-primary {
   background-color: transparent;
   color: var(--color-white);
@@ -166,6 +189,8 @@ body {
 .btn-primary:active {
   transform: translateY(0);
 }
+
+/* FALAR COM UM ENGENHEIRO */
 
 .btn-primary-contact {
   background-color: transparent;
@@ -1416,9 +1441,9 @@ body {
     padding: 1.5rem;
   }
 
-  .navbar-logo {
+  /* .navbar-logo {
     font-size: 1.2rem;
-  }
+  } */
 
   .btn-primary,
   .btn-secondary {
