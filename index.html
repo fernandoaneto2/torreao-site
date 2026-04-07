@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Torreão Engenharia — Projetos e Obras de Alta Performance</title>
+    <title>Torreão Engenharia — A Excelência da Engenharia</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -29,10 +29,14 @@
           <a href="#contato" class="nav-link">Contato</a>
         </nav>
         <div class="navbar-right">
-          <a href="tel:+5511999999999" class="phone-link"> </a>
+          <!-- <a href="tel:+5511999999999" class="phone-link">(11) 9 9999-9999</a> -->
           <button class="btn-primary navbar-cta">SOLICITAR ORÇAMENTO</button>
         </div>
-        <button class="hamburger" id="hamburger">
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Abrir menu de navegação"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -44,24 +48,26 @@
     <section id="inicio" class="hero">
       <div class="hero-content">
         <div class="hero-text">
-          <p class="hero-subtitle">ENGENHARIA ELÉTRICA ESPECIALIZADA</p>
+          <p class="hero-subtitle">A EXCELÊNCIA DA ENGENHARIA</p>
           <h1 class="hero-title">
             Construímos<br />o Futuro<br />
-            <span class="hero-title-gradient">com Precisão</span>
+            <span class="hero-title-gradient">com Inovação</span>
           </h1>
           <p class="hero-description">
-            Transforme seu projeto em realidade com a
-            <strong> Torreão Engenharia</strong>. Estamos prontos para atender
-            suas necessidades com soluções personalizadas e de alta performance.
+            Soluções de Engenharia Elétrica, Civil e Complementares com
+            excelência técnica e inovação em cada projeto com a
+            <strong> Torreão Engenharia</strong>.
           </p>
           <div class="hero-badges">
             <span class="badge">✓ CREA Certificado</span>
             <span class="badge">✓ ISO 9001</span>
             <span class="badge">✓ Entrega no Prazo</span>
           </div>
-          <div class="hero-buttons">
-            <button class="btn-primary">SOLICITAR ORÇAMENTO GRATUITO</button>
-            <button class="btn-secondary">CONHECER NOSSO PORTFÓLIO</button>
+          <div class="hero-buttons buttons-wrapper">
+            <a href="#contato" class="btn-primary">FALAR CONOSCO</a>
+            <a href="#projetos" class="btn-secondary"
+              >CONHECER NOSSO PORTFÓLIO</a
+            >
           </div>
         </div>
         <div class="hero-stats">
@@ -89,19 +95,18 @@
     <section id="sobre" class="about">
       <div class="container">
         <div class="about-header">
-          <h2 class="about-header-title">Sobre nós</h2>
+          <h2 class="about-header-title">Somos a Torreão Engenharia</h2>
           <p>
-            Na Torreão Engenharia, somos especialistas na viabilização e
-            execução de projetos de engenharia de alta performance.
-          </p>
-          <p>
-            Com um corpo técnico altamente qualificado, entregamos soluções que
-            unem tecnologia BIM, rigor normativo e excelência operacional. Nosso
-            compromisso é garantir a máxima eficiência e segurança em cada obra,
-            entregando resultados que superam as expectativas em termos de
-            custo, prazo e qualidade técnica. Conte com a Torreão para
-            transformar seus projetos mais ambiciosos em estruturas sólidas e
-            inteligentes.
+            Sua parceira confiável em engenharia elétrica, civil e segurança
+            eletrônica. Da infraestrutura ao detalhe técnico, entregamos
+            projetos elétricos, civis e de segurança eletrônica com o rigor que
+            obras de alto padrão exigem. Para quem busca ir além, somos
+            especialistas em geração solar, modelagem de negócios e gestão
+            energética — soluções pensadas para quem valoriza performance real,
+            não apenas economia no boleto. Nossa equipe altamente qualificada
+            trabalha com métodos e práticas comprovados para garantir cada
+            entrega dentro do prazo e do orçamento — sem surpresas, sem
+            concessões técnicas.
           </p>
         </div>
         <div class="about-grid">
@@ -154,125 +159,129 @@
     <!-- Services Section -->
     <section id="servicos" class="services">
       <div class="container">
-        <h2>Serviços</h2>
+        <h2>Nossos Serviços</h2>
         <p class="section-subtitle">
-          Cobrimos todo o ciclo de vida de uma edificação — do projeto à entrega
-          final, com excelência técnica em cada etapa.
+          Especialidades para suas necessidades de engenharia, energia e
+          segurança.
         </p>
 
         <div class="services-grid">
           <div class="service-card featured">
-            <div class="badge-featured">MAIS CONTRATADO</div>
-            <h3>Projetos estruturais</h3>
-            <p>
-              Cálculo e dimensionamento estrutural com tecnologia BIM para
-              edificações de todos os portes.
-            </p>
+            <!-- <div class="badge-featured">ESPECIALIDADE</div> -->
+            <h3>Geração fotovoltaica</h3>
+            <p>Projetos estruturais inovadores e soluções construtivas.</p>
             <ul>
-              <li>Concreto armado e protendido</li>
-              <li>Estruturas metálicas</li>
-              <li>Fundações especiais</li>
+              <li>On Grid e Off Grid</li>
+              <li>On Grid com Micro Inversor</li>
+              <li>Híbrido</li>
+              <li>Bomba Solar</li>
             </ul>
             <div class="service-actions">
               <a href="servicos.html" class="link-more">Ver detalhes →</a>
-              <a href="#contato" class="link-request"
-                >Solicitar orçamento personalizado</a
-              >
+              <a href="#contato" class="link-request">Solicitar orçamento</a>
             </div>
           </div>
 
           <div class="service-card">
-            <h3>Gestão de obras</h3>
+            <h3>Projetos de engenharia</h3>
             <p>
-              Gerenciamento completo de obras civis com controle de prazo,
-              qualidade e custos.
+              Projetos desenvolvidos em BIM, com modelagem 2D e 3D para máxima
+              precisão.
             </p>
             <ul>
-              <li>Cronograma físico-financeiro</li>
-              <li>Controle de qualidade</li>
-              <li>Gestão de fornecedores</li>
+              <li>
+                <strong>Escopo:</strong> ART (CREA), memoriais, compatibilização
+                e As Built
+              </li>
+              <li>
+                <strong>Elétricos:</strong> para todo tipo de Empreendimento
+                (BT/MT, medição agrupada, cabeamento e SPDA)
+              </li>
+              <li>
+                <strong>Complementares:</strong> PCI, Hidrossanitário, gás,
+                climatização e drenagem
+              </li>
             </ul>
             <div class="service-actions">
               <a href="#" class="link-more">Ver detalhes →</a>
-              <a href="#contato" class="link-request"
-                >Solicitar orçamento personalizado</a
-              >
+              <a href="#contato" class="link-request">Solicitar orçamento</a>
             </div>
           </div>
 
           <div class="service-card">
-            <h3>Projetos arquitetônicos</h3>
-            <p>
-              Design funcional e estético integrado ao projeto de engenharia, do
-              conceito à obra.
-            </p>
+            <h3>Carregadores Elétricos</h3>
+            <p>Soluções completas para infraestrutura de recarga veicular.</p>
             <ul>
-              <li>Plantas e cortes técnicos</li>
-              <li>Renderização 3D</li>
-              <li>Projeto executivo</li>
+              <li>
+                <strong>Infraestrutura:</strong> dimensionamento elétrico e
+                adequações
+              </li>
+              <li>
+                <strong>Carregadores:</strong> AC e DC (residencial, comercial e
+                industrial)
+              </li>
+              <li>
+                <strong>Proteções:</strong> disjuntores, DPS, e aterramento
+              </li>
+              <li>
+                <strong>Normas:</strong> NBR, concessionárias e segurança
+                elétrica
+              </li>
             </ul>
             <div class="service-actions">
               <a href="#" class="link-more">Ver detalhes →</a>
-              <a href="#contato" class="link-request"
-                >Solicitar orçamento personalizado</a
-              >
+              <a href="#contato" class="link-request">Solicitar orçamento</a>
             </div>
           </div>
 
           <div class="service-card">
-            <h3>Consultorias técnicas</h3>
+            <h3>Manutenção e Construção</h3>
             <p>
-              Laudos, perícias e consultoria especializada para decisões seguras
-              e embasadas.
+              Inteligência em infraestrutura para melhor performance dos seus
+              sistemas.
             </p>
             <ul>
-              <li>Laudos periciais</li>
-              <li>Vistoria de imóveis</li>
-              <li>Avaliação patrimonial</li>
+              <li>Manutenção Preventiva</li>
+              <li>Manutenção Corretiva Emergencial</li>
+              <li>Reformas e Ampliações Elétricas</li>
+              <li>Laudos Técnicos e Inspeções</li>
+              <li>Modernização de Sistemas</li>
             </ul>
             <div class="service-actions">
               <a href="#" class="link-more">Ver detalhes →</a>
-              <a href="#contato" class="link-request"
-                >Solicitar orçamento personalizado</a
-              >
+              <a href="#contato" class="link-request">Solicitar orçamento</a>
             </div>
           </div>
 
           <div class="service-card">
-            <h3>Reformas e retrofit</h3>
-            <p>
-              Modernização e reforma de edificações com soluções criativas e
-              seguras.
-            </p>
+            <h3>Subestações e Geradores</h3>
+            <p>Máxima confiabilidade energética e segurança operacional.</p>
             <ul>
-              <li>Retrofit estrutural</li>
-              <li>Fachadas e revestimentos</li>
-              <li>Adequações normativas</li>
+              <li>Manutenção Preditiva e Preventiva em Subestações</li>
+              <li>Instalação e Configuração de Grupos Geradores (GMG)</li>
+              <li>Modernização de Painéis e Quadros de Transferência (QTA)</li>
+              <li>Consultoria Técnica para Eficiência Energética</li>
             </ul>
             <div class="service-actions">
               <a href="#" class="link-more">Ver detalhes →</a>
-              <a href="#contato" class="link-request"
-                >Solicitar orçamento personalizado</a
-              >
+              <a href="#contato" class="link-request">Solicitar orçamento</a>
             </div>
           </div>
 
           <div class="service-card">
-            <h3>BIM e tecnologia</h3>
+            <h3>Sistemas de vigilância</h3>
             <p>
-              Modelagem digital completa com Building Information Modeling para
-              projetos integrados.
+              Instalação e manutenção de sistemas de segurança eletrônica para
+              ambientes residenciais, comerciais e industriais.
             </p>
             <ul>
-              <li>Modelagem Revit</li>
-              <li>Clash detection</li>
-              <li>Quantitativos BIM</li>
+              <li>Câmeras CFTV e monitoramento remoto</li>
+              <li>Controle de acesso e biometria</li>
+              <li>Alarmes e sensores perimetrais</li>
             </ul>
             <div class="service-actions">
               <a href="#" class="link-more">Ver detalhes →</a>
-              <a href="#contato" class="link-request"
-                >Solicitar orçamento personalizado</a
-              >
+              <a href="#contato" class="link-request">Solicitar orçamento</a>
             </div>
           </div>
         </div>
@@ -290,66 +299,41 @@
     <!-- Portfolio Section -->
     <section id="projetos" class="portfolio">
       <div class="container">
-        <h2>Projetos que<br />falam por si sós</h2>
+        <h2>Projetos de<br />sucesso e conexão</h2>
         <p class="section-subtitle">
           Cada obra é uma prova da nossa capacidade técnica e comprometimento.
-          Conheça alguns dos projetos que nos orgulham.
+          Conheça alguns dos projetos que nos orgulham e geram resultados.
         </p>
 
         <div class="portfolio-filters">
           <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="residencial">
-            Residencial
-          </button>
-          <button class="filter-btn" data-filter="comercial">Comercial</button>
+          <button class="filter-btn" data-filter="energia">Comercial</button>
           <button class="filter-btn" data-filter="industrial">
             Industrial
           </button>
-          <button class="filter-btn" data-filter="infraestrutura">
-            Infraestrutura
+          <button class="filter-btn" data-filter="comercial">
+            Residencial
           </button>
         </div>
 
         <div class="portfolio-grid">
-          <div class="portfolio-card" data-category="residencial">
+          <div class="portfolio-card" data-category="energia">
             <div class="portfolio-header">
-              <span class="category-tag">RESIDENCIAL</span>
-              <span class="area">4.200 m²</span>
+              <span class="category-tag">ENERGIA</span>
+              <span class="area">+25 MW</span>
             </div>
-            <h3>Residencial Vista Nobre</h3>
+            <h3>Usinas de Geração Solar</h3>
             <p>
-              Condomínio de alto padrão com 48 unidades. Projeto estrutural em
-              concreto armado com fundações em estacas hélice contínua.
+              Projetos de conexão em média tensão e execução de usinas
+              fotovoltaicas de grande porte para alta performance.
             </p>
             <div class="portfolio-meta">
-              <span>São Paulo, SP</span>
+              <span>Brasil</span>
               <span>2024</span>
             </div>
             <div class="portfolio-tags">
-              <span class="tag">Estrutural</span>
-              <span class="tag">Fundações</span>
-              <span class="tag">Gestão de Obra</span>
-            </div>
-          </div>
-
-          <div class="portfolio-card" data-category="comercial">
-            <div class="portfolio-header">
-              <span class="category-tag">COMERCIAL</span>
-              <span class="area">12.000 m²</span>
-            </div>
-            <h3>Centro Empresarial Torino</h3>
-            <p>
-              Torre comercial de 18 andares com estrutura mista aço-concreto e
-              sistemas de alta tecnologia BIM.
-            </p>
-            <div class="portfolio-meta">
-              <span>Campinas, SP</span>
-              <span>2023</span>
-            </div>
-            <div class="portfolio-tags">
-              <span class="tag">BIM</span>
-              <span class="tag">Estrutura Mista</span>
-              <span class="tag">Projetos Complementares</span>
+              <span class="tag">Geração Solar</span>
+              <span class="tag">Alta Tensão</span>
             </div>
           </div>
 
@@ -358,81 +342,38 @@
               <span class="category-tag">INDUSTRIAL</span>
               <span class="area">8.500 m²</span>
             </div>
-            <h3>Galpão Logístico Norte</h3>
+            <h3>Sistemas Híbridos Industriais</h3>
             <p>
-              Complexo logístico com estrutura metálica, piso de alta
-              resistência e sistemas de combate a incêndio.
+              Implementação de sistemas inteligentes de geração e armazenamento
+              para garantir a continuidade operacional industrial.
             </p>
             <div class="portfolio-meta">
-              <span>Guarulhos, SP</span>
-              <span>2024</span>
-            </div>
-            <div class="portfolio-tags">
-              <span class="tag">Estrutura Metálica</span>
-              <span class="tag">Piso Industrial</span>
-              <span class="tag">SPCI</span>
-            </div>
-          </div>
-
-          <div class="portfolio-card" data-category="infraestrutura">
-            <div class="portfolio-header">
-              <span class="category-tag">INFRAESTRUTURA</span>
-              <span class="area">1.200 m²</span>
-            </div>
-            <h3>Viaduto Municipal BR-153</h3>
-            <p>
-              Viaduto de concreto protendido com vãos de 35m. Projeto de alta
-              complexidade com execução em 8 meses.
-            </p>
-            <div class="portfolio-meta">
-              <span>Ribeirão Preto, SP</span>
-              <span>2022</span>
-            </div>
-            <div class="portfolio-tags">
-              <span class="tag">Protendido</span>
-              <span class="tag">Infraestrutura</span>
-              <span class="tag">Obra Pública</span>
-            </div>
-          </div>
-
-          <div class="portfolio-card" data-category="residencial">
-            <div class="portfolio-header">
-              <span class="category-tag">RESIDENCIAL</span>
-              <span class="area">6.800 m²</span>
-            </div>
-            <h3>Village Exclusive — Fase II</h3>
-            <p>
-              Segundo bloco de condomínio fechado com casas de alto padrão.
-              Gestão completa de obra e projeto estrutural.
-            </p>
-            <div class="portfolio-meta">
-              <span>Indaiatuba, SP</span>
+              <span>Brasil</span>
               <span>2023</span>
             </div>
             <div class="portfolio-tags">
-              <span class="tag">Gestão de Obra</span>
-              <span class="tag">Residencial Alto Padrão</span>
+              <span class="tag">Sistemas Híbridos</span>
+              <span class="tag">Eficiência Energética</span>
             </div>
           </div>
 
           <div class="portfolio-card" data-category="comercial">
             <div class="portfolio-header">
               <span class="category-tag">COMERCIAL</span>
-              <span class="area">2.100 m²</span>
+              <span class="area">12.000 m²</span>
             </div>
-            <h3>Retrofit Edifício Alameda</h3>
+            <h3>Projetos Elétricos de Alta Performance</h3>
             <p>
-              Projeto de retrofit completo em edifício dos anos 80. Reforço
-              estrutural, nova fachada e modernização dos sistemas.
+              Desenvolvimento completo de infraestrutura elétrica e sistemas
+              críticos para grandes empreendimentos comerciais em BIM.
             </p>
             <div class="portfolio-meta">
-              <span>São Paulo, SP</span>
+              <span>Brasil</span>
               <span>2024</span>
             </div>
             <div class="portfolio-tags">
-              <span class="tag">Retrofit</span>
-              <span class="tag">Reforço Estrutural</span>
-              <span class="tag">Fachada</span>
+              <span class="tag">Projetos em BIM</span>
+              <span class="tag">Sistemas Críticos</span>
             </div>
           </div>
         </div>
@@ -447,59 +388,59 @@
     <!-- Process Section -->
     <section id="processo" class="process">
       <div class="container">
-        <h2>Processo claro,<br />resultado garantido</h2>
+        <h2>Excelência em<br />cada etapa</h2>
         <p class="section-subtitle">
-          Transparência em cada etapa. Você acompanha de perto o desenvolvimento
-          do seu projeto do início ao fim.
+          Utilizamos métodos e práticas para garantir resultados dentro do prazo
+          e do orçamento planejado.
         </p>
 
         <div class="process-grid">
           <div class="process-step">
             <div class="step-number">01</div>
-            <h3>Consulta Inicial</h3>
+            <h3>Planejamento</h3>
             <p>
-              Reunião de alinhamento para entender suas necessidades, objetivos
-              e prazo. Sem compromisso, sem custo.
+              Análise técnica detalhada para entender suas necessidades e
+              estabelecer o cronograma ideal.
             </p>
           </div>
           <div class="process-step">
             <div class="step-number">02</div>
-            <h3>Proposta Técnica</h3>
+            <h3>Execução</h3>
             <p>
-              Elaboramos uma proposta detalhada com escopo, prazo, equipe e
-              orçamento transparente. Sem surpresas.
+              Aplicação de expertise técnica com rigor normativo para realizar o
+              projeto com máxima eficiência.
             </p>
           </div>
           <div class="process-step">
             <div class="step-number">03</div>
-            <h3>Desenvolvimento</h3>
+            <h3>Entrega</h3>
             <p>
-              Nossa equipe desenvolve os projetos com tecnologia BIM, com
-              apresentações periódicas para aprovação.
+              Entrega formal com documentação completa e verificação final para
+              sua total satisfação.
             </p>
           </div>
           <div class="process-step">
             <div class="step-number">04</div>
-            <h3>Execução</h3>
+            <h3>Monitoramento</h3>
             <p>
-              Gerenciamos cada etapa da obra com rigor, garantindo qualidade,
-              segurança e cumprimento do cronograma.
+              Acompanhamento contínuo dos resultados para garantir a performance
+              esperada.
             </p>
           </div>
           <div class="process-step">
             <div class="step-number">05</div>
-            <h3>Entrega & Vistoria</h3>
+            <h3>Suporte Técnico</h3>
             <p>
-              Entrega formal com laudo de conformidade, documentação completa e
-              as-built digitalizado.
+              Assistência especializada pós-entrega para qualquer necessidade ou
+              ajuste técnico.
             </p>
           </div>
           <div class="process-step">
             <div class="step-number">06</div>
-            <h3>Pós-Obra</h3>
+            <h3>Inovação</h3>
             <p>
-              Acompanhamento pós-entrega com suporte técnico, garantia de 5 anos
-              e manutenção preventiva.
+              Atualização constante com novas tecnologias para manter seu
+              projeto sempre moderno.
             </p>
           </div>
         </div>
@@ -627,19 +568,17 @@
     <!-- CTA Section -->
     <section class="cta-section">
       <div class="container">
-        <h2>Transforme sua visão<br />em uma obra real</h2>
+        <h2>A excelência da<br />engenharia ao seu alcance</h2>
         <p>
-          Agende uma consulta gratuita com nossos engenheiros e descubra como a
-          Torreão pode tornar seu projeto uma realidade — dentro do prazo e do
-          orçamento.
+          Conte conosco para impulsionar o sucesso do seu investimento com
+          soluções técnicas de ponta e inovação constante em cada etapa do
+          projeto.
         </p>
-        <button class="btn-primary btn-large">
-          SOLICITAR ORÇAMENTO GRATUITO
-        </button>
+        <button class="btn-primary btn-large">FALAR CONOSCO</button>
         <div class="cta-benefits">
           <span>Sem compromisso</span>
           <span>•</span>
-          <span>Resposta em até 2 horas</span>
+          <span>Resposta rápida</span>
           <span>•</span>
           <span>Orçamento 100% gratuito</span>
         </div>
@@ -693,12 +632,12 @@
             <div class="form-group">
               <select required>
                 <option value="">Selecione um serviço...</option>
-                <option value="estrutural">Projeto Estrutural</option>
-                <option value="gestao">Gestão de Obra</option>
-                <option value="arquitetonico">Projeto Arquitetônico</option>
-                <option value="consultoria">Consultoria Técnica</option>
-                <option value="reforma">Reforma / Retrofit</option>
-                <option value="bim">BIM & Tecnologia</option>
+                <option value="fotovoltaica">Geração Fotovoltaica</option>
+                <option value="engenharia">Projetos de Engenharia</option>
+                <option value="manutencao">Manutenção e Consultoria</option>
+                <option value="treinamento">Treinamentos Técnicos</option>
+                <option value="instalacao">Instalações e Montagens</option>
+                <option value="gestao">Gestão de Energia</option>
                 <option value="outro">Outro</option>
               </select>
             </div>
@@ -709,9 +648,7 @@
                 required
               ></textarea>
             </div>
-            <button type="submit" class="btn-primary">
-              SOLICITAR ORÇAMENTO GRATUITO
-            </button>
+            <button type="submit" class="btn-primary">FALAR CONOSCO</button>
             <p class="form-disclaimer">
               Ao enviar, você concorda com nossa política de privacidade. Não
               enviamos spam.
@@ -726,22 +663,22 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h4>Engenharia elétrica de alta performance</h4>
+            <h4>A excelência da engenharia</h4>
             <p>
-              Projetos, execução e consultoria que transformam ambições em
-              realidade.
+              Soluções integradas que transformam seus investimentos em
+              resultados concretos e sustentáveis.
             </p>
           </div>
 
           <div class="footer-section">
             <h4>SERVIÇOS</h4>
             <ul>
-              <li><a href="#servicos">Projetos Estruturais</a></li>
-              <li><a href="#servicos">Gestão de Obras</a></li>
-              <li><a href="#servicos">Projetos Arquitetônicos</a></li>
-              <li><a href="#servicos">Consultoria Técnica</a></li>
-              <li><a href="#servicos">Reformas e Retrofit</a></li>
-              <li><a href="#servicos">BIM & Tecnologia</a></li>
+              <li><a href="#servicos">Geração Fotovoltaica</a></li>
+              <li><a href="#servicos">Projetos de Engenharia</a></li>
+              <li><a href="#servicos">Manutenção e Consultoria</a></li>
+              <li><a href="#servicos">Treinamentos Técnicos</a></li>
+              <li><a href="#servicos">Instalações e Montagens</a></li>
+              <li><a href="#servicos">Gestão de Energia</a></li>
             </ul>
           </div>
 
@@ -800,12 +737,12 @@
           <div class="form-group">
             <select required>
               <option value="">Selecione um serviço...</option>
-              <option value="estrutural">Projeto Estrutural</option>
-              <option value="gestao">Gestão de Obra</option>
-              <option value="arquitetonico">Projeto Arquitetônico</option>
-              <option value="consultoria">Consultoria Técnica</option>
-              <option value="reforma">Reforma / Retrofit</option>
-              <option value="bim">BIM & Tecnologia</option>
+              <option value="fotovoltaica">Geração Fotovoltaica</option>
+              <option value="engenharia">Projetos de Engenharia</option>
+              <option value="manutencao">Manutenção e Consultoria</option>
+              <option value="treinamento">Treinamentos Técnicos</option>
+              <option value="instalacao">Instalações e Montagens</option>
+              <option value="gestao">Gestão de Energia</option>
               <option value="outro">Outro</option>
             </select>
           </div>
@@ -816,9 +753,7 @@
               required
             ></textarea>
           </div>
-          <button type="submit" class="btn-primary">
-            SOLICITAR ORÇAMENTO GRATUITO
-          </button>
+          <button type="submit" class="btn-primary">FALAR CONOSCO</button>
         </form>
       </div>
     </div>

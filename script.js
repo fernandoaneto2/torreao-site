@@ -1,45 +1,47 @@
 // ===== MOBILE MENU TOGGLE =====
-const hamburger = document.getElementById("hamburger");
-const navbarMenu = document.querySelector(".navbar-menu");
+const hamburger = document.getElementById('hamburger'); 
+const menu = document.getElementById('navbarMenu'); 
 
-hamburger.addEventListener("click", () => {
-  navbarMenu.classList.toggle("active");
-});
+hamburger.addEventListener('click', () => { 
+  hamburger.classList.toggle('active'); 
+  menu.classList.toggle('open'); 
+}); 
 
-// Fechar menu ao clicar em um link
-document.querySelectorAll(".nav-link").forEach((link) => {
-  link.addEventListener("click", () => {
-    navbarMenu.classList.remove("active");
-  });
-});
+// Fecha o menu ao clicar em um link 
+document.querySelectorAll('.nav-link').forEach(link => { 
+  link.addEventListener('click', () => { 
+    hamburger.classList.remove('active'); 
+    menu.classList.remove('open'); 
+  }); 
+}); 
 
 // ===== MODAL HANDLING =====
-const ctaModal = document.getElementById("ctaModal");
-const ctaButtons = document.querySelectorAll(".btn-primary, .navbar-cta");
-const modalClose = document.querySelector(".modal-close");
+// const ctaModal = document.getElementById("ctaModal");
+// const ctaButtons = document.querySelectorAll(".btn-primary, .navbar-cta");
+// const modalClose = document.querySelector(".modal-close");
 
-// Abrir modal ao clicar em botões CTA
-document.querySelectorAll(".btn-primary, .navbar-cta").forEach((button) => {
-  button.addEventListener("click", (e) => {
-    // Não abrir modal se for um botão dentro de um formulário
-    if (button.type !== "submit" && !button.closest("form")) {
-      e.preventDefault();
-      ctaModal.classList.add("active");
-    }
-  });
-});
+// // Abrir modal ao clicar em botões CTA
+// document.querySelectorAll(".btn-primary, .navbar-cta").forEach((button) => {
+//   button.addEventListener("click", (e) => {
+//     // Não abrir modal se for um botão dentro de um formulário
+//     if (button.type !== "submit" && !button.closest("form")) {
+//       e.preventDefault();
+//       ctaModal.classList.add("active");
+//     }
+//   });
+// });
 
-// Fechar modal
-modalClose.addEventListener("click", () => {
-  ctaModal.classList.remove("active");
-});
+// // Fechar modal
+// modalClose.addEventListener("click", () => {
+//   ctaModal.classList.remove("active");
+// });
 
-// Fechar modal ao clicar fora
-ctaModal.addEventListener("click", (e) => {
-  if (e.target === ctaModal) {
-    ctaModal.classList.remove("active");
-  }
-});
+// // Fechar modal ao clicar fora
+// ctaModal.addEventListener("click", (e) => {
+//   if (e.target === ctaModal) {
+//     ctaModal.classList.remove("active");
+//   }
+// });
 
 // ===== PORTFOLIO FILTER =====
 const filterButtons = document.querySelectorAll(".filter-btn");
@@ -178,9 +180,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 const navbar = document.querySelector(".navbar");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
-    navbar.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.4)";
+    navbar.classList.add("scrolled");
   } else {
-    navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.3)";
+    navbar.classList.remove("scrolled");
   }
 });
 
