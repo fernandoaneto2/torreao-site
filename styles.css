@@ -401,7 +401,7 @@ body {
     height: 44px;
     font-size: 0.8rem;
     letter-spacing: 0.6px;
-    padding: 0 2.5rem; /* padding lateral define a "largura" elegante */
+    padding: 1rem 2.5rem; /* padding lateral define a "largura" elegante */
     white-space: nowrap; /* garante texto em linha única */
   }
 }
@@ -409,10 +409,14 @@ body {
 @media (max-width: 480px) {
   .btn-primary,
   .btn-secondary {
-    height: 40px;
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
-    padding: 0 2rem;
+    min-width: unset;
+    width: auto; /* abraça o conteúdo */
+    max-width: none; /* sem limite fixo */
+    height: 44px;
+    font-size: 0.8rem;
+    letter-spacing: 0.6px;
+    padding: 1rem 2.5rem; /* padding lateral define a "largura" elegante */
+    white-space: nowrap; /* garante texto em linha única */
   }
 }
 
