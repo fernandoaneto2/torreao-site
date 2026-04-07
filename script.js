@@ -1,19 +1,19 @@
 // ===== MOBILE MENU TOGGLE =====
-const hamburger = document.getElementById('hamburger'); 
-const menu = document.getElementById('navbarMenu'); 
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("navbarMenu");
 
-hamburger.addEventListener('click', () => { 
-  hamburger.classList.toggle('active'); 
-  menu.classList.toggle('open'); 
-}); 
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("open");
+});
 
-// Fecha o menu ao clicar em um link 
-document.querySelectorAll('.nav-link').forEach(link => { 
-  link.addEventListener('click', () => { 
-    hamburger.classList.remove('active'); 
-    menu.classList.remove('open'); 
-  }); 
-}); 
+// Fecha o menu ao clicar em um link
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    menu.classList.remove("open");
+  });
+});
 
 // ===== MODAL HANDLING =====
 // const ctaModal = document.getElementById("ctaModal");
@@ -83,18 +83,32 @@ function handleFormSubmit(e) {
 
   const form = e.target;
   const formData = new FormData(form);
+  const data = Object.fromEntries(formData);
 
-  // Simular envio do formulário
-  console.log("Formulário enviado:", Object.fromEntries(formData));
+  // 1. Defina o seu e-mail
+  const meuEmail = "torreaoengenharia@gmail.com";
 
-  // Mostrar mensagem de sucesso
+  // 2. Monte o assunto e o corpo da mensagem com os dados do form
+  const assunto = encodeURIComponent(
+    `Novo Contato: ${data.servico || "Projeto Engenharia"}`
+  );
+
+  const corpo = encodeURIComponent(
+    `Nome: ${data.nome}\n` +
+      `Telefone: ${data.telefone}\n` +
+      `E-mail: ${data.email}\n` +
+      `Serviço: ${data.servico}\n\n` +
+      `Descrição do Projeto:\n${data.mensagem}`
+  );
+
+  // 3. Redireciona para o navegador de e-mail (mailto)
+  window.location.href = `mailto:${meuEmail}?subject=${assunto}&body=${corpo}`;
+
+  // --- SEU CÓDIGO DE SUCESSO ABAIXO ---
   showSuccessMessage(form);
-
-  // Limpar formulário
   form.reset();
 
-  // Fechar modal se for o modal form
-  if (form === modalForm) {
+  if (form === modalForm || form.id === "modalForm") {
     setTimeout(() => {
       ctaModal.classList.remove("active");
     }, 1500);
@@ -105,32 +119,32 @@ contactForm.addEventListener("submit", handleFormSubmit);
 modalForm.addEventListener("submit", handleFormSubmit);
 
 // Função para mostrar mensagem de sucesso
-function showSuccessMessage(form) {
-  const successDiv = document.createElement("div");
-  successDiv.className = "success-message";
-  successDiv.textContent = "Obrigado! Entraremos em contato em breve.";
-  successDiv.style.cssText = `
-        position: fixed;
-        top: 80px;
-        right: 20px;
-        background-color: #8B3A3A;
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 4px;
-        box-shadow: 0 5px 15px rgba(139, 58, 58, 0.3);
-        z-index: 3000;
-        animation: slideInRight 0.3s ease;
-    `;
+// function showSuccessMessage(form) {
+//   const successDiv = document.createElement("div");
+//   successDiv.className = "success-message";
+//   successDiv.textContent = "Obrigado! Entraremos em contato em breve.";
+//   successDiv.style.cssText = `
+//         position: fixed;
+//         top: 80px;
+//         right: 20px;
+//         background-color: #8B3A3A;
+//         color: white;
+//         padding: 1rem 1.5rem;
+//         border-radius: 4px;
+//         box-shadow: 0 5px 15px rgba(139, 58, 58, 0.3);
+//         z-index: 3000;
+//         animation: slideInRight 0.3s ease;
+//     `;
 
-  document.body.appendChild(successDiv);
+//   document.body.appendChild(successDiv);
 
-  setTimeout(() => {
-    successDiv.style.animation = "slideOutRight 0.3s ease";
-    setTimeout(() => {
-      successDiv.remove();
-    }, 300);
-  }, 3000);
-}
+//   setTimeout(() => {
+//     successDiv.style.animation = "slideOutRight 0.3s ease";
+//     setTimeout(() => {
+//       successDiv.remove();
+//     }, 300);
+//   }, 3000);
+// }
 
 // Adicionar animação CSS
 const style = document.createElement("style");

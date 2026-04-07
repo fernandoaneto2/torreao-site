@@ -1,5 +1,5 @@
 /* ===== PALETA DE CORES ===== */
-/* :root {
+:root {
   --color-black: #000000;
   --color-white: #ffffff;
   --color-dark: #1a1a1a;
@@ -9,7 +9,7 @@
   --color-wine: #8b3a3a;
   --color-wine-light: #a0424d;
   --color-wine-dark: #6b2e2e;
-} */
+}
 
 :root {
   /* Tons Base */
@@ -431,6 +431,21 @@ body {
     height: 46px;
     font-size: 0.8rem;
   }
+}
+
+.btn-whatsapp {
+  background-color: var(--color-wine);
+  color: var(--color-white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
 }
 
 .btn-whatsapp:hover {

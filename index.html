@@ -752,39 +752,75 @@
               </div>
             </div>
 
-            <button class="btn-whatsapp">Chamar no WhatsApp</button>
+            <a href="tel:+5511922763114" class="btn-whatsapp"
+              >Chamar no WhatsApp</a
+            >
           </div>
 
           <form class="contact-form" id="contactForm">
             <div class="form-group">
-              <input type="text" placeholder="Nome Completo *" required />
+              <input
+                type="text"
+                name="nome"
+                placeholder="Nome Completo *"
+                required
+              />
             </div>
+
             <div class="form-group">
-              <input type="tel" placeholder="Telefone / WhatsApp *" required />
+              <input
+                type="tel"
+                name="telefone"
+                placeholder="Telefone / WhatsApp *"
+                required
+              />
             </div>
+
             <div class="form-group">
-              <input type="email" placeholder="E-mail *" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail *"
+                required
+              />
             </div>
+
             <div class="form-group">
-              <select required>
+              <select name="servico" required>
                 <option value="">Selecione um serviço</option>
-                <option value="fotovoltaica">Geração Fotovoltaica</option>
-                <option value="engenharia">Projetos de Engenharia</option>
-                <option value="manutencao">Carregadores Elétricos</option>
-                <option value="treinamento">Manutenção e Construção</option>
-                <option value="instalacao">Subestações e Geradores</option>
-                <option value="gestao">Sistemas de Vigilância</option>
-                <option value="outro">Outro</option>
+                <option value="Geração Fotovoltaica">
+                  Geração Fotovoltaica
+                </option>
+                <option value="Projetos de Engenharia">
+                  Projetos de Engenharia
+                </option>
+                <option value="Carregadores Elétricos">
+                  Carregadores Elétricos
+                </option>
+                <option value="Manutenção e Construção">
+                  Manutenção e Construção
+                </option>
+                <option value="Subestações e Geradores">
+                  Subestações e Geradores
+                </option>
+                <option value="Sistemas de Vigilância">
+                  Sistemas de Vigilância
+                </option>
+                <option value="Outro">Outro</option>
               </select>
             </div>
+
             <div class="form-group">
               <textarea
+                name="mensagem"
                 placeholder="Descreva seu projeto: localização, porte, prazo estimado e qualquer detalhe relevante..."
                 rows="5"
                 required
               ></textarea>
             </div>
-            <button type="submit" class="btn-primary">FALAR CONOSCO</button>
+
+            <button type="submit" class="btn-whatsapp">FALAR CONOSCO</button>
+
             <p class="form-disclaimer">
               Ao enviar, você concorda com nossa política de privacidade. Não
               enviamos spam.
