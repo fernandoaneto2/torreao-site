@@ -422,21 +422,6 @@ body {
   }
 }
 
-/* Celulares Muito Pequenos (iPhone SE / Telas < 375px) */
-@media (max-width: 375px) {
-  .buttons-wrapper {
-    gap: 0.75rem;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    min-width: 180px;
-    width: 95%; /* Quase largura total para não apertar o texto */
-    height: 44px;
-    font-size: 0.75rem;
-    padding: 0 1rem;
-  }
-}
 .btn-whatsapp:hover {
   background-color: var(--color-wine-dark);
 }
@@ -737,7 +722,7 @@ body {
 
   .hero-buttons .btn-primary,
   .hero-buttons .btn-secondary {
-    padding: 0 2rem;
+    padding: 0.6rem 2rem;
     font-size: 0.78rem;
   }
 }
