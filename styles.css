@@ -65,6 +65,7 @@ body {
   left: 0;
   right: 0;
   z-index: 9999;
+  padding: 0.5rem;
   color: var(--color-white);
 
   background: rgba(18, 18, 20, 0.55);
