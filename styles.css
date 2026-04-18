@@ -80,6 +80,43 @@ body {
     box-shadow 0.4s ease;
 }
 
+@media (max-width: 1280px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .navbar.scrolled {
   background: rgba(14, 14, 16, 0.72);
   backdrop-filter: blur(48px) saturate(200%) brightness(0.8) contrast(1.15);
