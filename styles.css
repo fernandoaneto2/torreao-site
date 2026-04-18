@@ -2007,3 +2007,98 @@ body {
   color: var(--color-wine);
   text-decoration: underline;
 }
+
+/* ===== SERVICE SEGMENTS ===== */
+.service-segments {
+  font-size: 0.85rem;
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== PORTFOLIO CARD — NOVO LAYOUT COM IMAGEM ===== */
+.portfolio-card {
+  /* Override padding do layout antigo para o novo (image + body) */
+  padding: 0;
+  overflow: hidden;
+}
+
+.portfolio-image {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  display: block;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.06);
+}
+
+.portfolio-image .category-tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  margin: 0;
+}
+
+.portfolio-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.portfolio-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  gap: 0.5rem;
+}
+
+.portfolio-meta-top .area {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-wine);
+}
+
+.portfolio-meta-top .year {
+  font-size: 0.82rem;
+  color: var(--color-gray);
+}
+
+.portfolio-body h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.portfolio-body p {
+  font-size: 0.88rem;
+  color: var(--color-dark-gray);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+/* Em mobile mantém 1 coluna e imagem full-width */
+@media (max-width: 480px) {
+  .portfolio-image {
+    aspect-ratio: 16 / 10;
+  }
+  .portfolio-body {
+    padding: 1.1rem;
+  }
+}
