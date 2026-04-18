@@ -105,6 +105,11 @@ body {
     padding: 0.5rem;
   }
 }
+@media (max-width: 320px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+}
 
 
 
