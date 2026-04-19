@@ -762,100 +762,85 @@ body {
 }
 
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.2rem;
+  .hero {
+    min-height: 100svh;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .hero-description {
-    font-size: 1rem;
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 0;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
   }
 
+  .hero-subtitle,
+  .hero-description,
+  .hero-badges,
   .hero-stats {
-    /* Em celulares muito estreitos, 2 colunas podem espremer os números. 
-       Se quiser manter 2 colunas, use o código abaixo: */
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    display: none;
   }
 
-  .stat-card {
-    padding: 1.2rem; /* Reduz o padding para caber lado a lado */
-  }
-
-  .stat-number {
-    font-size: 1.8rem;
-  }
-
-  .stat-label {
-    font-size: 0.75rem;
+  .hero-title {
+    font-size: 2.4rem;
+    line-height: 1.15;
+    margin-bottom: 2rem;
   }
 
   .hero-buttons {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.875rem;
+    width: 100%;
   }
 
-  .hero-buttons .btn-primary,
   .hero-buttons .btn-secondary {
-    width: 100%; /* ← abraça o conteúdo */
-    max-width: 300px; /* ← remove limite */
-    min-width: unset; /* ← remove o min-width forçado */
+    display: none;
+  }
+
+  .hero-buttons .btn-primary {
+    width: 100%;
+    max-width: 280px;
+    min-width: unset;
     height: 52px;
-    font-size: 0.85rem;
-    padding: 0.5rem 2rem;
-    letter-spacing: 0.7px;
+    font-size: 0.9rem;
   }
 }
 
-/* Ajuste para telas muito pequenas (abaixo de 480px) */
 @media (max-width: 480px) {
   .hero {
-    padding: 88px 14px 48px;
-  }
-  .hero-stats {
-    grid-template-columns: 1fr;
+    padding: 0 14px;
   }
   .hero-title {
-    font-size: 1.9rem;
-  }
-  .hero-buttons .btn-primary,
-  .hero-buttons .btn-secondary {
-    padding: 0.6rem 2rem;
-    font-size: 0.78rem;
+    font-size: 2rem;
+    margin-bottom: 1.75rem;
   }
 }
 
 @media (max-width: 375px) {
   .hero {
-    padding: 84px 12px 44px;
+    padding: 0 12px;
   }
   .hero-title {
-    font-size: 1.7rem;
-  }
-  .hero-description {
-    font-size: 0.9rem;
-  }
-  .hero-subtitle {
-    font-size: 0.75rem;
+    font-size: 1.75rem;
   }
 }
 
 @media (max-width: 320px) {
   .hero {
-    padding: 78px 10px 40px;
+    padding: 0 10px;
   }
   .hero-title {
     font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
-  .hero-description {
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-  .stat-number {
-    font-size: 1.5rem;
-  }
-  .stat-label {
-    font-size: 0.7rem;
+  .hero-buttons .btn-primary {
+    height: 48px;
+    font-size: 0.82rem;
   }
 }
 
