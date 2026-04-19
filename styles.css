@@ -316,9 +316,9 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
-    background: rgba(18, 18, 20, 0.55);
-    backdrop-filter: blur(40px) saturate(180%) brightness(0.85) contrast(1.1);
-    -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(0.85) contrast(1.1);
+    background: rgba(12, 12, 14, 0.92);
+    backdrop-filter: blur(40px) saturate(180%) brightness(0.75) contrast(1.1);
+    -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(0.75) contrast(1.1);
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.08) inset;
