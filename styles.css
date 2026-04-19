@@ -91,12 +91,11 @@ body {
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  /* padding: 0.45rem 1.5rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  height: 66px; /* ← altura fixa da barra */
+  height: 80px;
 }
 
 .navbar-logo {
@@ -122,9 +121,8 @@ body {
 
 .logo {
   width: 100%;
-  max-width: 200px; /* ← desktop */
+  max-width: 160px;
   height: auto;
-  padding-top: 10px;
   object-fit: contain;
   vertical-align: middle;
   display: block;
@@ -224,11 +222,11 @@ body {
 /* ── Wide tablet / small desktop (≤ 1280px) ── */
 @media (max-width: 1280px) {
   .navbar-container {
-    padding: 1rem 1.5rem;
-    height: 52px;
+    padding: 0 1.5rem;
+    height: 72px;
   }
   .logo {
-    max-width: 180px;
+    max-width: 148px;
   }
 
   .navbar-menu {
@@ -249,12 +247,12 @@ body {
 /* ── Tablet landscape (≤ 1024px) ── */
 @media (max-width: 1024px) {
   .navbar-container {
-    padding: 0.4rem 1.25rem;
-    height: 52px;
+    padding: 0 1.25rem;
+    height: 68px;
   }
 
   .logo {
-    max-width: 160px; /* ← tablet landscape */
+    max-width: 136px;
   }
 
   .navbar-menu {
@@ -303,13 +301,13 @@ body {
 /* ── Tablet portrait (≤ 768px) ── */
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 0.4rem 1.25rem;
-    height: 52px;
+    padding: 0 1.25rem;
+    height: 64px;
   }
 
   .logo {
     padding-left: 0;
-    max-width: 150px; /* ← tablet portrait */
+    max-width: 130px;
   }
 
   .navbar-menu {
@@ -330,12 +328,12 @@ body {
 /* ── Mobile portrait (≤ 480px) ── */
 @media (max-width: 480px) {
   .navbar-container {
-    padding: 0.4rem 1rem;
-    height: 48px;
+    padding: 0 1rem;
+    height: 60px;
   }
 
   .logo {
-    /* max-width: 260px; ← mobile */
+    max-width: 120px;
   }
 
   .nav-link {
