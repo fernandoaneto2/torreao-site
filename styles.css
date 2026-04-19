@@ -44,6 +44,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Justificação global de texto corrido */
+p, li, blockquote {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
@@ -574,7 +581,6 @@ body {
   color: var(--color-gray);
   margin-bottom: 1.5rem;
   line-height: 1.8;
-  /* text-align: justify; */
 }
 
 .hero-badges {
@@ -703,7 +709,7 @@ body {
     /* Mantém a grade, mas ajusta a proporção para não espremer o texto */
     grid-template-columns: 1fr;
     gap: 3rem;
-    text-align: left; /* Garante o alinhamento à esquerda */
+    text-align: left;
   }
 
   .hero-title {
@@ -738,7 +744,6 @@ body {
   }
 
   .hero-description {
-    text-align: left; /* Remove qualquer centralização residual */
     font-size: 1rem;
   }
 
@@ -859,7 +864,6 @@ body {
   color: var(--color-dark-gray);
   margin-bottom: 1.5rem;
   line-height: 1.8;
-  text-align: justify;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
