@@ -2,16 +2,28 @@
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("navbarMenu");
 
+function openMenu() {
+  hamburger.classList.add("active");
+  menu.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  menu.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
 hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  menu.classList.toggle("open");
+  menu.classList.contains("open") ? closeMenu() : openMenu();
 });
 
 document.querySelectorAll(".nav-link").forEach((link) => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    menu.classList.remove("open");
-  });
+  link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
 });
 
 // ===== MODAL HANDLING =====

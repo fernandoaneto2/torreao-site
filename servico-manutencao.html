@@ -38,12 +38,23 @@
       <div class="navbar-container">
         <div class="navbar-logo">
           <a class="logo-link" href="index.html">
-            <img class="logo" src="images/logo-torreao-banner.png" alt="Logo Torreão Engenharia" loading="eager" />
+            <img class="logo" src="./images/logo-torreao-banner.png" alt="Logo Torreão Engenharia" loading="eager" />
           </a>
         </div>
+        <nav class="navbar-menu" id="navbarMenu">
+          <a href="index.html#inicio" class="nav-link">Início</a>
+          <a href="index.html#sobre" class="nav-link">Sobre</a>
+          <a href="index.html#servicos" class="nav-link">Serviços</a>
+          <a href="index.html#projetos" class="nav-link">Projetos</a>
+          <a href="index.html#processo" class="nav-link">Processo</a>
+          <a href="index.html#contato" class="nav-link">Contato</a>
+        </nav>
         <div class="navbar-right">
           <a href="index.html#contato" class="btn-primary navbar-cta">SOLICITAR ORÇAMENTO</a>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegação">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 
@@ -117,5 +128,17 @@
         </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        var h = document.getElementById("hamburger");
+        var m = document.getElementById("navbarMenu");
+        function openMenu() { h.classList.add("active"); m.classList.add("open"); document.body.style.overflow = "hidden"; }
+        function closeMenu() { h.classList.remove("active"); m.classList.remove("open"); document.body.style.overflow = ""; }
+        h.addEventListener("click", function () { m.classList.contains("open") ? closeMenu() : openMenu(); });
+        document.querySelectorAll(".nav-link").forEach(function (l) { l.addEventListener("click", closeMenu); });
+        document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
+        window.addEventListener("scroll", function () { document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50); });
+      })();
+    </script>
   </body>
 </html>
