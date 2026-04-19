@@ -2442,8 +2442,8 @@ body {
 /* ===== WHATSAPP FLOAT ===== */
 .whatsapp-float {
   position: fixed;
-  bottom: 90px;
-  right: 30px;
+  bottom: 24px;
+  left: 24px;
   width: 56px;
   height: 56px;
   background-color: #25d366;
