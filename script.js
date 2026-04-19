@@ -141,54 +141,6 @@ window.addEventListener("scroll", () => {
   navbar.classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// ===== SCROLL TO TOP =====
-const scrollTopBtn = document.createElement("button");
-scrollTopBtn.innerHTML = "↑";
-scrollTopBtn.className = "scroll-top-btn";
-scrollTopBtn.setAttribute("aria-label", "Voltar ao topo");
-scrollTopBtn.style.cssText = `
-  position: fixed;
-  bottom: 155px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background-color: #8B3A3A;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: none;
-  z-index: 999;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(139,58,58,0.3);
-`;
-document.body.appendChild(scrollTopBtn);
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollTopBtn.style.display = "flex";
-    scrollTopBtn.style.alignItems = "center";
-    scrollTopBtn.style.justifyContent = "center";
-  } else {
-    scrollTopBtn.style.display = "none";
-  }
-});
-
-scrollTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-scrollTopBtn.addEventListener("mouseover", () => {
-  scrollTopBtn.style.backgroundColor = "#6B2E2E";
-  scrollTopBtn.style.transform = "scale(1.1)";
-});
-
-scrollTopBtn.addEventListener("mouseout", () => {
-  scrollTopBtn.style.backgroundColor = "#8B3A3A";
-  scrollTopBtn.style.transform = "scale(1)";
-});
-
 // ===== INTERSECTION OBSERVER =====
 const observerOptions = {
   threshold: 0.1,
