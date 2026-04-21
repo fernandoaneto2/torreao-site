@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
       .sp-hero {
-        background: linear-gradient(135deg, #0e0e10 0%, #1a1a1a 100%);
+        background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)), url('./images/sections/surveillance.jpg') center/cover no-repeat;
         padding: 120px 20px 60px;
         text-align: center;
         color: #fff;
       }
+      .sp-img-block { margin: 0 0 2.5rem; border-radius: 8px; overflow: hidden; aspect-ratio: 16/9; background: #1a1a1a; }
+      .sp-img-block img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .sp-hero .sp-tag {
         display: inline-block;
         font-size: 0.72rem;
@@ -251,6 +253,10 @@
         </div>
       </div>
 
+      <figure class="sp-img-block">
+        <img src="./images/services/vigilancia-1.jpg" alt="Central de monitoramento com câmeras — Torreão Engenharia" loading="lazy" />
+      </figure>
+
       <div class="sp-section">
         <h2>Segmentos atendidos</h2>
         <ul>
@@ -288,19 +294,23 @@
         </ul>
       </div>
 
-      <div class="sp-cta">
-        <h2>Solicite um orçamento gratuito</h2>
-        <p>
-          Nossa equipe visita o local e apresenta a solução ideal para o seu
-          espaço.
-        </p>
-        <a href="index.html#contato" class="btn-primary"
-          >FALAR COM UM ENGENHEIRO</a
-        >
-      </div>
-
       <a href="index.html#servicos" class="sp-back">← Voltar aos serviços</a>
     </main>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Solicite um orçamento gratuito</h2>
+        <p>Nossa equipe visita o local e apresenta a solução de segurança ideal para o seu espaço.</p>
+        <a href="index.html#contato" class="btn-secondary">FALAR COM UM ENGENHEIRO</a>
+        <div class="cta-benefits">
+          <span>Sem compromisso</span>
+          <span>•</span>
+          <span>Resposta rápida</span>
+          <span>•</span>
+          <span>Orçamento 100% gratuito</span>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer" style="padding: 30px 20px">
       <div class="container">

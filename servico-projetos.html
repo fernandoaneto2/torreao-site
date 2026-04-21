@@ -1,38 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projetos de Engenharia — Torreão Engenharia</title>
-    <meta name="description" content="Projetos elétricos, PCI, hidrossanitário e complementares em BIM. ART CREA, memoriais, As Built e compatibilização. Torreão Engenharia, Campinas/SP." />
+    <meta
+      name="description"
+      content="Projetos elétricos, PCI, hidrossanitário e complementares em BIM. ART CREA, memoriais, As Built e compatibilização. Torreão Engenharia, Campinas/SP."
+    />
     <meta name="robots" content="index, follow" />
     <link rel="icon" href="images/logo-torreao-banner.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
     <style>
-      .sp-hero { background: linear-gradient(135deg, #0e0e10 0%, #1a1a1a 100%); padding: 120px 20px 60px; text-align: center; color: #fff; }
-      .sp-hero .sp-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #8b3a3a; border-bottom: 2px solid #8b3a3a; padding-bottom: 0.25rem; margin-bottom: 1.25rem; }
-      .sp-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
-      .sp-hero p { font-size: 1rem; color: #999; max-width: 580px; margin: 0 auto 2rem; line-height: 1.7; }
-      .sp-body { max-width: 860px; margin: 0 auto; padding: 60px 20px 80px; }
-      .sp-section { margin-bottom: 3rem; }
-      .sp-section h2 { font-size: 1.15rem; font-weight: 700; color: #000; border-left: 3px solid #8b3a3a; padding-left: 0.75rem; margin-bottom: 1rem; }
-      p, li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
-      .sp-section p { color: #666; line-height: 1.8; margin-bottom: 0.75rem; }
-      .sp-section ul { padding-left: 1.5rem; color: #666; }
-      .sp-section ul li { margin-bottom: 0.5rem; line-height: 1.6; }
-      .sp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
-      .sp-card { background: #f5f5f5; border-radius: 8px; padding: 1.25rem 1.5rem; border-left: 3px solid #8b3a3a; }
-      .sp-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; color: #000; }
-      .sp-card p { font-size: 0.85rem; color: #666; line-height: 1.55; margin: 0; }
-      .norm-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-      .norm-badge { background: #0e0e10; color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 4px; }
-      .sp-cta { background: #0e0e10; border-radius: 12px; padding: 2.5rem 2rem; text-align: center; margin-top: 3rem; }
-      .sp-cta h2 { font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
-      .sp-cta p { color: #999; font-size: 0.9rem; margin-bottom: 1.5rem; }
-      .sp-back { display: inline-block; margin-top: 2rem; color: #8b3a3a; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
-      .sp-back:hover { color: #6b2e2e; }
-      @media (max-width: 480px) { .sp-hero h1 { font-size: 1.6rem; } .sp-body { padding: 40px 16px 60px; } }
-      @media (max-width: 320px) { .sp-hero { padding: 100px 12px 48px; } .sp-hero h1 { font-size: 1.35rem; } .sp-body { padding: 32px 12px 48px; } .sp-cta { padding: 1.75rem 1rem; } }
+      .sp-hero {
+        background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)), url('./images/sections/engineering.jpg') center/cover no-repeat;
+        padding: 120px 20px 60px;
+        text-align: center;
+        color: #fff;
+      }
+      .sp-img-block { margin: 0 0 2.5rem; border-radius: 8px; overflow: hidden; aspect-ratio: 16/9; background: #1a1a1a; }
+      .sp-img-block img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .sp-entrega-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+      .sp-entrega-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 8px; padding: 1.25rem 1.5rem; border-top: 3px solid #8b3a3a; }
+      .sp-entrega-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #8b3a3a; margin-bottom: 0.5rem; display: block; }
+      .sp-entrega-card h3 { font-size: 0.95rem; font-weight: 700; color: #000; margin-bottom: 0.5rem; }
+      .sp-entrega-specs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.5rem; }
+      .sp-entrega-spec { font-size: 0.72rem; background: #f0f0f0; padding: 0.15rem 0.5rem; border-radius: 3px; color: #555; }
+      .sp-entrega-card > p { font-size: 0.82rem !important; color: #888 !important; line-height: 1.5 !important; margin: 0 !important; }
+      .sp-hero .sp-tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #8b3a3a;
+        border-bottom: 2px solid #8b3a3a;
+        padding-bottom: 0.25rem;
+        margin-bottom: 1.25rem;
+      }
+      .sp-hero h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+      .sp-hero p {
+        font-size: 1rem;
+        color: #999;
+        max-width: 580px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+      }
+      .sp-body {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 60px 20px 80px;
+      }
+      .sp-section {
+        margin-bottom: 3rem;
+      }
+      .sp-section h2 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #000;
+        border-left: 3px solid #8b3a3a;
+        padding-left: 0.75rem;
+        margin-bottom: 1rem;
+      }
+      p,
+      li {
+        text-align: justify;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+      .sp-section p {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 0.75rem;
+      }
+      .sp-section ul {
+        padding-left: 1.5rem;
+        color: #666;
+      }
+      .sp-section ul li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+      }
+      .sp-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.25rem;
+        margin-top: 1rem;
+      }
+      .sp-card {
+        background: #f5f5f5;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+        border-left: 3px solid #8b3a3a;
+      }
+      .sp-card h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        color: #000;
+      }
+      .sp-card p {
+        font-size: 0.85rem;
+        color: #666;
+        line-height: 1.55;
+        margin: 0;
+      }
+      .norm-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+      }
+      .norm-badge {
+        background: #0e0e10;
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        padding: 0.3rem 0.85rem;
+        border-radius: 4px;
+      }
+      .sp-cta {
+        background: #0e0e10;
+        border-radius: 12px;
+        padding: 2.5rem 2rem;
+        text-align: center;
+        margin-top: 3rem;
+      }
+      .sp-cta h2 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.5rem;
+      }
+      .sp-cta p {
+        color: #999;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+      .sp-back {
+        display: inline-block;
+        margin-top: 2rem;
+        color: #8b3a3a;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .sp-back:hover {
+        color: #6b2e2e;
+      }
+      @media (max-width: 480px) {
+        .sp-hero h1 {
+          font-size: 1.6rem;
+        }
+        .sp-body {
+          padding: 40px 16px 60px;
+        }
+      }
+      @media (max-width: 320px) {
+        .sp-hero {
+          padding: 100px 12px 48px;
+        }
+        .sp-hero h1 {
+          font-size: 1.35rem;
+        }
+        .sp-body {
+          padding: 32px 12px 48px;
+        }
+        .sp-cta {
+          padding: 1.75rem 1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -40,7 +182,12 @@
       <div class="navbar-container">
         <div class="navbar-logo">
           <a class="logo-link" href="index.html">
-            <img class="logo" src="./images/logo-torreao-banner.png" alt="Logo Torreão Engenharia" loading="eager" />
+            <img
+              class="logo"
+              src="./images/logo-torreao-banner.png"
+              alt="Logo Torreão Engenharia"
+              loading="eager"
+            />
           </a>
         </div>
         <nav class="navbar-menu" id="navbarMenu">
@@ -52,9 +199,15 @@
           <a href="index.html#contato" class="nav-link">Contato</a>
         </nav>
         <div class="navbar-right">
-          <a href="index.html#contato" class="btn-primary navbar-cta">SOLICITAR ORÇAMENTO</a>
+          <a href="index.html#contato" class="btn-primary navbar-cta"
+            >SOLICITAR ORÇAMENTO</a
+          >
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegação">
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Abrir menu de navegação"
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -63,15 +216,25 @@
     <div class="sp-hero">
       <span class="sp-tag">Serviço</span>
       <h1>Projetos de Engenharia</h1>
-      <p>Projetos elétricos e complementares desenvolvidos em BIM, com ART emitida por engenheiro CREA ativo e entrega de documentação completa.</p>
+      <p>
+        Projetos elétricos e complementares desenvolvidos em BIM, com ART
+        emitida por engenheiro CREA ativo e entrega de documentação completa.
+      </p>
     </div>
 
     <main class="sp-body">
-
       <div class="sp-section">
         <h2>Como funciona</h2>
-        <p>Cada projeto começa com o levantamento técnico do empreendimento — dimensões, cargas, especificações da concessionária e normas aplicáveis. A partir disso, desenvolvemos a modelagem 2D e 3D em BIM, garantindo compatibilização com os demais sistemas da edificação.</p>
-        <p>Entregamos o projeto completo com ART, memoriais descritivos, quantitativos e As Built ao final da obra.</p>
+        <p>
+          Cada projeto começa com o levantamento técnico do empreendimento —
+          dimensões, cargas, especificações da concessionária e normas
+          aplicáveis. A partir disso, desenvolvemos a modelagem 2D e 3D em BIM,
+          garantindo compatibilização com os demais sistemas da edificação.
+        </p>
+        <p>
+          Entregamos o projeto completo com ART, memoriais descritivos,
+          quantitativos e As Built ao final da obra.
+        </p>
       </div>
 
       <div class="sp-section">
@@ -81,7 +244,7 @@
           <li>Memorial descritivo e de cálculo</li>
           <li>Pranças técnicas 2D/3D em BIM</li>
           <li>Compatibilização com projetos complementares</li>
-          <li>As Built ao final da execução</li>
+          <li>Realizamos As Built para maior segurança e confiabilidade</li>
         </ul>
       </div>
 
@@ -90,23 +253,38 @@
         <div class="sp-grid">
           <div class="sp-card">
             <h3>Elétrico BT/MT</h3>
-            <p>Instalações de baixa e média tensão para todo tipo de empreendimento.</p>
+            <p>
+              Instalações de baixa e média tensão para todo tipo de
+              empreendimento.
+            </p>
           </div>
           <div class="sp-card">
             <h3>Medição agrupada</h3>
-            <p>Projetos para condomínios residenciais e comerciais com padrão da concessionária.</p>
+            <p>
+              Projetos para condomínios residenciais e comerciais com padrão da
+              concessionária.
+            </p>
           </div>
           <div class="sp-card">
             <h3>Cabeamento estruturado</h3>
-            <p>Infraestrutura de dados e telecomunicações para ambientes corporativos.</p>
+            <p>
+              Infraestrutura de dados e telecomunicações para ambientes
+              corporativos.
+            </p>
           </div>
           <div class="sp-card">
             <h3>SPDA</h3>
-            <p>Projeto de para-raios conforme NBR 5419 com laudo de conformidade e ART.</p>
+            <p>
+              Projeto de para-raios conforme NBR 5419 com laudo de conformidade
+              e ART.
+            </p>
           </div>
           <div class="sp-card">
             <h3>PCI</h3>
-            <p>Prevenção e Combate a Incêndio — aprovação junto ao Corpo de Bombeiros (AVCB).</p>
+            <p>
+              Prevenção e Combate a Incêndio — aprovação junto ao Corpo de
+              Bombeiros (AVCB).
+            </p>
           </div>
           <div class="sp-card">
             <h3>Complementares</h3>
@@ -114,6 +292,10 @@
           </div>
         </div>
       </div>
+
+      <figure class="sp-img-block">
+        <img src="./images/services/projetos-1.jpg" alt="Engenheiros revisando projeto elétrico — Torreão Engenharia" loading="lazy" />
+      </figure>
 
       <div class="sp-section">
         <h2>Normas aplicadas</h2>
@@ -126,19 +308,74 @@
         </div>
       </div>
 
-      <div class="sp-cta">
-        <h2>Solicite um orçamento gratuito</h2>
-        <p>Envie as informações do seu empreendimento e nossa equipe retorna com proposta técnica.</p>
-        <a href="index.html#contato" class="btn-primary">FALAR COM UM ENGENHEIRO</a>
+      <div class="sp-section">
+        <h2>Entregas de Referência</h2>
+        <div class="sp-entrega-grid">
+          <div class="sp-entrega-card">
+            <span class="sp-entrega-tag">Residencial · 2025</span>
+            <h3>Complexo Residencial Luna</h3>
+            <div class="sp-entrega-specs">
+              <span class="sp-entrega-spec">8.500 m²</span>
+              <span class="sp-entrega-spec">Projeto BIM</span>
+              <span class="sp-entrega-spec">SPDA</span>
+            </div>
+            <p>Projeto elétrico executivo com medição agrupada e SPDA.</p>
+          </div>
+          <div class="sp-entrega-card">
+            <span class="sp-entrega-tag">Residencial · 2023</span>
+            <h3>Porto Resort</h3>
+            <div class="sp-entrega-specs">
+              <span class="sp-entrega-spec">8.500 m²</span>
+              <span class="sp-entrega-spec">Agrupamento</span>
+            </div>
+            <p>Medição agrupada conforme padrão da concessionária.</p>
+          </div>
+          <div class="sp-entrega-card">
+            <span class="sp-entrega-tag">Residencial · 2024</span>
+            <h3>Projeto PCI</h3>
+            <div class="sp-entrega-specs">
+              <span class="sp-entrega-spec">2.000 m²</span>
+              <span class="sp-entrega-spec">AVCB aprovado</span>
+            </div>
+            <p>Sistema completo de prevenção e combate a incêndio.</p>
+          </div>
+          <div class="sp-entrega-card">
+            <span class="sp-entrega-tag">Comercial · 2024</span>
+            <h3>Vias do Atlântico</h3>
+            <div class="sp-entrega-specs">
+              <span class="sp-entrega-spec">2.000 m²</span>
+              <span class="sp-entrega-spec">Projeto BIM</span>
+              <span class="sp-entrega-spec">Subestação</span>
+            </div>
+            <p>Projeto elétrico executivo para loteamento comercial.</p>
+          </div>
+        </div>
       </div>
 
       <a href="index.html#servicos" class="sp-back">← Voltar aos serviços</a>
     </main>
 
-    <footer class="footer" style="padding: 30px 20px;">
+    <section class="cta-section">
       <div class="container">
-        <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-          <p>&copy; 2026 Torreão Engenharia LTDA. Todos os direitos reservados.</p>
+        <h2>Solicite um orçamento gratuito</h2>
+        <p>Envie as informações do seu empreendimento e nossa equipe retorna com proposta técnica.</p>
+        <a href="index.html#contato" class="btn-secondary">FALAR COM UM ENGENHEIRO</a>
+        <div class="cta-benefits">
+          <span>Sem compromisso</span>
+          <span>•</span>
+          <span>Resposta rápida</span>
+          <span>•</span>
+          <span>Orçamento 100% gratuito</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" style="padding: 30px 20px">
+      <div class="container">
+        <div class="footer-bottom" style="border-top: none; padding-top: 0">
+          <p>
+            &copy; 2026 Torreão Engenharia LTDA. Todos os direitos reservados.
+          </p>
           <div class="footer-links">
             <span>CNPJ 20.262.501/0001-53 | Registro CREA-SP em vigor</span>
           </div>
@@ -149,12 +386,30 @@
       (function () {
         var h = document.getElementById("hamburger");
         var m = document.getElementById("navbarMenu");
-        function openMenu() { h.classList.add("active"); m.classList.add("open"); document.body.style.overflow = "hidden"; }
-        function closeMenu() { h.classList.remove("active"); m.classList.remove("open"); document.body.style.overflow = ""; }
-        h.addEventListener("click", function () { m.classList.contains("open") ? closeMenu() : openMenu(); });
-        document.querySelectorAll(".nav-link").forEach(function (l) { l.addEventListener("click", closeMenu); });
-        document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
-        window.addEventListener("scroll", function () { document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50); });
+        function openMenu() {
+          h.classList.add("active");
+          m.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          h.classList.remove("active");
+          m.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+        h.addEventListener("click", function () {
+          m.classList.contains("open") ? closeMenu() : openMenu();
+        });
+        document.querySelectorAll(".nav-link").forEach(function (l) {
+          l.addEventListener("click", closeMenu);
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeMenu();
+        });
+        window.addEventListener("scroll", function () {
+          document
+            .querySelector(".navbar")
+            .classList.toggle("scrolled", window.scrollY > 50);
+        });
       })();
     </script>
   </body>

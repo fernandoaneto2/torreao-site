@@ -9,7 +9,9 @@
     <link rel="icon" href="images/logo-torreao-banner.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
     <style>
-      .sp-hero { background: linear-gradient(135deg, #0e0e10 0%, #1a1a1a 100%); padding: 120px 20px 60px; text-align: center; color: #fff; }
+      .sp-hero { background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)), url('./images/sections/ev-charger.jpg') center/cover no-repeat; padding: 120px 20px 60px; text-align: center; color: #fff; }
+      .sp-img-block { margin: 0 0 2.5rem; border-radius: 8px; overflow: hidden; aspect-ratio: 16/9; background: #1a1a1a; }
+      .sp-img-block img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .sp-hero .sp-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #8b3a3a; border-bottom: 2px solid #8b3a3a; padding-bottom: 0.25rem; margin-bottom: 1.25rem; }
       .sp-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
       .sp-hero p { font-size: 1rem; color: #999; max-width: 580px; margin: 0 auto 2rem; line-height: 1.7; }
@@ -86,6 +88,10 @@
         </div>
       </div>
 
+      <figure class="sp-img-block">
+        <img src="./images/services/carregadores-1.jpg" alt="Veículo elétrico em recarga — Torreão Engenharia" loading="lazy" />
+      </figure>
+
       <div class="sp-section">
         <h2>O que está incluído</h2>
         <ul>
@@ -107,14 +113,23 @@
         </ul>
       </div>
 
-      <div class="sp-cta">
-        <h2>Solicite um orçamento gratuito</h2>
-        <p>Nossa equipe visita o local e apresenta a melhor solução para a sua infraestrutura de recarga.</p>
-        <a href="index.html#contato" class="btn-primary">FALAR COM UM ENGENHEIRO</a>
-      </div>
-
       <a href="index.html#servicos" class="sp-back">← Voltar aos serviços</a>
     </main>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Solicite um orçamento gratuito</h2>
+        <p>Nossa equipe visita o local e apresenta a melhor solução para a sua infraestrutura de recarga.</p>
+        <a href="index.html#contato" class="btn-secondary">FALAR COM UM ENGENHEIRO</a>
+        <div class="cta-benefits">
+          <span>Sem compromisso</span>
+          <span>•</span>
+          <span>Resposta rápida</span>
+          <span>•</span>
+          <span>Orçamento 100% gratuito</span>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer" style="padding: 30px 20px;">
       <div class="container">
