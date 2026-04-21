@@ -153,6 +153,28 @@ window.addEventListener("scroll", () => {
   navbar.classList.toggle("scrolled", window.scrollY > 50);
 });
 
+// ===== ACTIVE NAV LINK (scroll spy) =====
+const sections = document.querySelectorAll("section[id], header[id]");
+const navLinks = document.querySelectorAll(".nav-link[href^='#']");
+
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${entry.target.id}`
+          );
+        });
+      }
+    });
+  },
+  { rootMargin: "-50% 0px -50% 0px" }
+);
+
+sections.forEach((section) => sectionObserver.observe(section));
+
 // ===== INTERSECTION OBSERVER =====
 const observerOptions = {
   threshold: 0.1,
