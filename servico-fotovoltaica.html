@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geração Fotovoltaica — Torreão Engenharia</title>
-    <meta name="description" content="Projetos de geração solar fotovoltaica On Grid, Off Grid, híbrido e bomba solar. +25MW em projetos de conexão. Torreão Engenharia, Campinas/SP." />
+    <meta
+      name="description"
+      content="Projetos de geração solar fotovoltaica On Grid, Off Grid, híbrido e bomba solar. +25MW em projetos de conexão. Torreão Engenharia, Campinas/SP."
+    />
     <meta name="robots" content="index, follow" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,13 +15,26 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
       .sp-hero {
-        background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)), url('./images/sections/solar.jpg') center/cover no-repeat;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
+          url("./images/sections/solar.jpg") center/cover no-repeat;
         padding: 120px 20px 60px;
         text-align: center;
         color: #fff;
       }
-      .sp-img-block { margin: 0 0 2.5rem; border-radius: 8px; overflow: hidden; aspect-ratio: 16/9; background: #1a1a1a; }
-      .sp-img-block img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .sp-img-block {
+        margin: 0 0 2.5rem;
+        border-radius: 8px;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+        background: #1a1a1a;
+      }
+      .sp-img-block img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
       .sp-hero .sp-tag {
         display: inline-block;
         font-size: 0.72rem;
@@ -30,30 +46,153 @@
         padding-bottom: 0.25rem;
         margin-bottom: 1.25rem;
       }
-      .sp-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
-      .sp-hero p { font-size: 1rem; color: #999; max-width: 580px; margin: 0 auto 2rem; line-height: 1.7; }
-      .sp-body { max-width: 860px; margin: 0 auto; padding: 60px 20px 80px; }
-      .sp-section { margin-bottom: 3rem; }
-      .sp-section h2 { font-size: 1.15rem; font-weight: 700; color: #000; border-left: 3px solid #8b3a3a; padding-left: 0.75rem; margin-bottom: 1rem; }
-      p, li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
-      .sp-section p { color: #666; line-height: 1.8; margin-bottom: 0.75rem; }
-      .sp-section ul { padding-left: 1.5rem; color: #666; }
-      .sp-section ul li { margin-bottom: 0.5rem; line-height: 1.6; }
-      .sp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
-      .sp-card { background: #f5f5f5; border-radius: 8px; padding: 1.25rem 1.5rem; border-left: 3px solid #8b3a3a; }
-      .sp-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; color: #000; }
-      .sp-card p { font-size: 0.85rem; color: #666; line-height: 1.55; margin: 0; }
-      .sp-stat-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem; }
-      .sp-stat { background: #0e0e10; border-radius: 8px; padding: 1.25rem 1.75rem; text-align: center; flex: 1; min-width: 120px; }
-      .sp-stat .num { font-size: 1.8rem; font-weight: 700; color: #fff; }
-      .sp-stat .lbl { font-size: 0.78rem; color: #999; margin-top: 0.25rem; }
-      .sp-cta { background: #0e0e10; border-radius: 12px; padding: 2.5rem 2rem; text-align: center; margin-top: 3rem; }
-      .sp-cta h2 { font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
-      .sp-cta p { color: #999; font-size: 0.9rem; margin-bottom: 1.5rem; }
-      .sp-back { display: inline-block; margin-top: 2rem; color: #8b3a3a; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
-      .sp-back:hover { color: #6b2e2e; }
-      @media (max-width: 480px) { .sp-hero h1 { font-size: 1.6rem; } .sp-body { padding: 40px 16px 60px; } }
-      @media (max-width: 320px) { .sp-hero { padding: 100px 12px 48px; } .sp-hero h1 { font-size: 1.35rem; } .sp-body { padding: 32px 12px 48px; } .sp-cta { padding: 1.75rem 1rem; } }
+      .sp-hero h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+      .sp-hero p {
+        font-size: 1rem;
+        color: #999;
+        max-width: 580px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+      }
+      .sp-body {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 60px 20px 80px;
+      }
+      .sp-section {
+        margin-bottom: 3rem;
+      }
+      .sp-section h2 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #000;
+        border-left: 3px solid #8b3a3a;
+        padding-left: 0.75rem;
+        margin-bottom: 1rem;
+      }
+      p,
+      li {
+        text-align: justify;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+      .sp-section p {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 0.75rem;
+      }
+      .sp-section ul {
+        padding-left: 1.5rem;
+        color: #666;
+      }
+      .sp-section ul li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+      }
+      .sp-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.25rem;
+        margin-top: 1rem;
+      }
+      .sp-card {
+        background: #f5f5f5;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+        border-left: 3px solid #8b3a3a;
+      }
+      .sp-card h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        color: #000;
+      }
+      .sp-card p {
+        font-size: 0.85rem;
+        color: #666;
+        line-height: 1.55;
+        margin: 0;
+      }
+      .sp-stat-row {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+      .sp-stat {
+        background: #0e0e10;
+        border-radius: 8px;
+        padding: 1.25rem 1.75rem;
+        text-align: center;
+        flex: 1;
+        min-width: 120px;
+      }
+      .sp-stat .num {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .sp-stat .lbl {
+        font-size: 0.78rem;
+        color: #999;
+        margin-top: 0.25rem;
+      }
+      .sp-cta {
+        background: #0e0e10;
+        border-radius: 12px;
+        padding: 2.5rem 2rem;
+        text-align: center;
+        margin-top: 3rem;
+      }
+      .sp-cta h2 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.5rem;
+      }
+      .sp-cta p {
+        color: #999;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+      .sp-back {
+        display: inline-block;
+        margin-top: 2rem;
+        color: #8b3a3a;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .sp-back:hover {
+        color: #6b2e2e;
+      }
+      @media (max-width: 480px) {
+        .sp-hero h1 {
+          font-size: 1.6rem;
+        }
+        .sp-body {
+          padding: 40px 16px 60px;
+        }
+      }
+      @media (max-width: 320px) {
+        .sp-hero {
+          padding: 100px 12px 48px;
+        }
+        .sp-hero h1 {
+          font-size: 1.35rem;
+        }
+        .sp-body {
+          padding: 32px 12px 48px;
+        }
+        .sp-cta {
+          padding: 1.75rem 1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -61,7 +200,12 @@
       <div class="navbar-container">
         <div class="navbar-logo">
           <a class="logo-link" href="index.html">
-            <img class="logo" src="./images/logo-torreao-banner.png" alt="Logo Torreão Engenharia" loading="eager" />
+            <img
+              class="logo"
+              src="./images/logo-torreao-banner.png"
+              alt="Logo Torreão Engenharia"
+              loading="eager"
+            />
           </a>
         </div>
         <nav class="navbar-menu" id="navbarMenu">
@@ -73,9 +217,15 @@
           <a href="index.html#contato" class="nav-link">Contato</a>
         </nav>
         <div class="navbar-right">
-          <a href="index.html#contato" class="btn-primary navbar-cta">SOLICITAR ORÇAMENTO</a>
+          <a href="index.html#contato" class="btn-primary navbar-cta"
+            >SOLICITAR ORÇAMENTO</a
+          >
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegação">
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Abrir menu de navegação"
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -84,24 +234,43 @@
     <div class="sp-hero">
       <span class="sp-tag">Serviço</span>
       <h1>Geração Fotovoltaica</h1>
-      <p>Soluções completas em energia solar — do projeto à conexão com a concessionária. Mais de 25MW em projetos entregues.</p>
+      <p>
+        Soluções completas em energia solar — do projeto à conexão com a
+        concessionária. Mais de 25MW em projetos entregues.
+      </p>
     </div>
 
     <main class="sp-body">
-
       <div class="sp-section">
         <h2>Números que falam</h2>
         <div class="sp-stat-row">
-          <div class="sp-stat"><div class="num">+25MW</div><div class="lbl">em projetos de conexão</div></div>
-          <div class="sp-stat"><div class="num">+10</div><div class="lbl">anos de experiência</div></div>
-          <div class="sp-stat"><div class="num">+15</div><div class="lbl">cidades atendidas</div></div>
+          <div class="sp-stat">
+            <div class="num">+25MW</div>
+            <div class="lbl">em projetos de conexão</div>
+          </div>
+          <div class="sp-stat">
+            <div class="num">+10</div>
+            <div class="lbl">anos de experiência</div>
+          </div>
+          <div class="sp-stat">
+            <div class="num">+15</div>
+            <div class="lbl">cidades atendidas</div>
+          </div>
         </div>
       </div>
 
       <div class="sp-section">
         <h2>Como funciona</h2>
-        <p>Desenvolvemos o projeto elétrico e estrutural do sistema solar, elaboramos a documentação exigida pela concessionária e acompanhamos todo o processo de aprovação e conexão à rede. O trabalho é executado com ART emitida por engenheiro CREA ativo.</p>
-        <p>Após a aprovação, a instalação é realizada pela nossa equipe técnica, com testes de funcionamento e entrega de relatório final.</p>
+        <p>
+          Desenvolvemos o projeto elétrico e estrutural do sistema solar,
+          elaboramos a documentação exigida pela concessionária e acompanhamos
+          todo o processo de aprovação e conexão à rede. O trabalho é executado
+          com ART emitida por engenheiro CREA ativo.
+        </p>
+        <p>
+          Após a aprovação, a instalação é realizada pela nossa equipe técnica,
+          com testes de funcionamento e entrega de relatório final.
+        </p>
       </div>
 
       <div class="sp-section">
@@ -109,29 +278,48 @@
         <div class="sp-grid">
           <div class="sp-card">
             <h3>On Grid</h3>
-            <p>Conectado à rede elétrica. Gera créditos de energia na concessionária e reduz a conta de luz.</p>
+            <p>
+              Conectado à rede elétrica. Gera créditos de energia na
+              concessionária e reduz a conta de luz.
+            </p>
           </div>
           <div class="sp-card">
             <h3>Off Grid</h3>
-            <p>Totalmente independente da rede. Ideal para áreas sem fornecimento elétrico ou como backup completo.</p>
+            <p>
+              Totalmente independente da rede. Ideal para áreas sem fornecimento
+              elétrico ou como backup completo.
+            </p>
           </div>
           <div class="sp-card">
             <h3>On Grid com Micro Inversor</h3>
-            <p>Cada painel tem seu próprio inversor — maior eficiência mesmo com sombreamento parcial.</p>
+            <p>
+              Cada painel tem seu próprio inversor — maior eficiência mesmo com
+              sombreamento parcial.
+            </p>
           </div>
           <div class="sp-card">
             <h3>Híbrido</h3>
-            <p>Combina geração solar com banco de baterias e rede elétrica. Máxima autonomia e segurança.</p>
+            <p>
+              Combina geração solar com banco de baterias e rede elétrica.
+              Máxima autonomia e segurança.
+            </p>
           </div>
           <div class="sp-card">
             <h3>Bomba Solar</h3>
-            <p>Sistema para bombeamento de água acionado diretamente pela energia gerada pelos painéis.</p>
+            <p>
+              Sistema para bombeamento de água acionado diretamente pela energia
+              gerada pelos painéis.
+            </p>
           </div>
         </div>
       </div>
 
       <figure class="sp-img-block">
-        <img src="./images/services/fotovoltaica-1.jpg" alt="Instalação de sistema solar fotovoltaico — Torreão Engenharia" loading="lazy" />
+        <img
+          src="./images/services/fotovoltaica-1.jpg"
+          alt="Instalação de sistema solar fotovoltaico — Torreão Engenharia"
+          loading="lazy"
+        />
       </figure>
 
       <div class="sp-section">
@@ -151,8 +339,13 @@
     <section class="cta-section">
       <div class="container">
         <h2>Solicite um orçamento gratuito</h2>
-        <p>Nossos engenheiros analisam seu consumo e apresentam a solução solar mais eficiente para o seu caso.</p>
-        <a href="index.html#contato" class="btn-secondary">FALAR COM UM ENGENHEIRO</a>
+        <p>
+          Nossos engenheiros analisam seu consumo e apresentam a solução solar
+          mais eficiente para o seu caso.
+        </p>
+        <a href="index.html#contato" class="btn-secondary"
+          >FALAR COM UM ENGENHEIRO</a
+        >
         <div class="cta-benefits">
           <span>Sem compromisso</span>
           <span>•</span>
@@ -163,10 +356,12 @@
       </div>
     </section>
 
-    <footer class="footer" style="padding: 30px 20px;">
+    <footer class="footer" style="padding: 30px 20px">
       <div class="container">
-        <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-          <p>&copy; 2026 Torreão Engenharia LTDA. Todos os direitos reservados.</p>
+        <div class="footer-bottom" style="border-top: none; padding-top: 0">
+          <p>
+            &copy; 2026 Torreão Engenharia LTDA. Todos os direitos reservados.
+          </p>
           <div class="footer-links">
             <span>CNPJ 20.262.501/0001-53 | Registro CREA-SP em vigor</span>
           </div>
@@ -177,12 +372,30 @@
       (function () {
         var h = document.getElementById("hamburger");
         var m = document.getElementById("navbarMenu");
-        function open() { h.classList.add("active"); m.classList.add("open"); document.body.style.overflow = "hidden"; }
-        function close() { h.classList.remove("active"); m.classList.remove("open"); document.body.style.overflow = ""; }
-        h.addEventListener("click", function () { m.classList.contains("open") ? close() : open(); });
-        document.querySelectorAll(".nav-link").forEach(function (l) { l.addEventListener("click", close); });
-        document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
-        window.addEventListener("scroll", function () { document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50); });
+        function open() {
+          h.classList.add("active");
+          m.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function close() {
+          h.classList.remove("active");
+          m.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+        h.addEventListener("click", function () {
+          m.classList.contains("open") ? close() : open();
+        });
+        document.querySelectorAll(".nav-link").forEach(function (l) {
+          l.addEventListener("click", close);
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") close();
+        });
+        window.addEventListener("scroll", function () {
+          document
+            .querySelector(".navbar")
+            .classList.toggle("scrolled", window.scrollY > 50);
+        });
       })();
     </script>
   </body>
