@@ -975,6 +975,8 @@ h6 {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
 }
 
 .link-more {
