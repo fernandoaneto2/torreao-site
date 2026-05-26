@@ -216,7 +216,7 @@ h6 {
   margin: 0;
   padding: 0.5rem 0;
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + 8px);
   left: 50%;
   min-width: 220px;
   background: #0e0e12;
@@ -229,6 +229,16 @@ h6 {
   transform: translateX(-50%) translateY(-4px);
   transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
   z-index: 200;
+}
+
+/* Ponte invisível entre o trigger e o menu — evita que o hover quebre no gap */
+.nav-dropdown__menu::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
 }
 
 @media (hover: hover) and (pointer: fine) {
