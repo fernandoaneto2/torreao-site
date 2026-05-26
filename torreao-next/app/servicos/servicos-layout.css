@@ -1,0 +1,291 @@
+/* ===== SERVICE PAGE LAYOUT — compartilhado por todas as páginas de serviço ===== */
+
+/* Hero */
+.sp-hero {
+  padding: 120px 20px 60px;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sp-hero .sp-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8b3a3a;
+  border-bottom: 2px solid #8b3a3a;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.sp-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.sp-hero p {
+  font-size: 1rem;
+  color: #999;
+  max-width: 580px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+/* Body */
+.sp-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+.sp-section {
+  margin-bottom: 3rem;
+}
+
+.sp-section h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #000;
+  border-left: 3px solid #8b3a3a;
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sp-section p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.sp-section ul {
+  padding-left: 1.5rem;
+  color: #666;
+}
+
+.sp-section ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Cards */
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.sp-card {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid #8b3a3a;
+}
+
+.sp-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #000;
+}
+
+.sp-card p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Image block */
+.sp-img-block {
+  margin: 0 0 2.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  background: #1a1a1a;
+}
+
+.sp-img-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Norm badges */
+.norm-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.norm-badge {
+  background: transparent;
+  color: #8b3a3a;
+  font-family: Inter, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.85rem;
+  border-radius: 4px;
+  border: 1.5px solid #8b3a3a;
+}
+
+/* Entrega cards */
+.sp-entrega-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.sp-entrega-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  border-top: 3px solid #8b3a3a;
+}
+
+.sp-entrega-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #8b3a3a;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.sp-entrega-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.sp-entrega-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.sp-entrega-spec {
+  font-size: 0.72rem;
+  background: #f0f0f0;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  color: #555;
+}
+
+.sp-entrega-card > p {
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Stats row */
+.sp-stat-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.sp-stat {
+  background: #0e0e10;
+  border-radius: 8px;
+  padding: 1.25rem 1.75rem;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+.sp-stat .num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.sp-stat .lbl {
+  font-size: 0.78rem;
+  color: #999;
+  margin-top: 0.25rem;
+}
+
+/* Gallery grid */
+.sp-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 0 0 2.5rem;
+}
+
+.sp-gallery img,
+.sp-gallery-ph {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+.sp-gallery-ph {
+  background: linear-gradient(135deg, #f2f2f2 0%, #e6e6e6 100%);
+  border: 1.5px dashed #d0d0d0;
+}
+
+@media (max-width: 600px) {
+  .sp-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sp-gallery img:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    aspect-ratio: 16/9;
+  }
+}
+
+/* Back link */
+.sp-back {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #8b3a3a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.sp-back:hover {
+  color: #6b2e2e;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .sp-hero h1 {
+    font-size: 1.6rem;
+  }
+  .sp-body {
+    padding: 40px 16px 60px;
+  }
+}
+
+@media (max-width: 320px) {
+  .sp-hero {
+    padding: 100px 12px 48px;
+  }
+  .sp-hero h1 {
+    font-size: 1.35rem;
+  }
+  .sp-body {
+    padding: 32px 12px 48px;
+  }
+}

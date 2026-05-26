@@ -1,0 +1,67 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ─── Dependências ────────────────────────────────────────────────────────────
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ─── Build / Next.js ─────────────────────────────────────────────────────────
+/.next/
+/out/
+/build
+
+# ─── Testes e QA ─────────────────────────────────────────────────────────────
+/coverage
+/qa/reports/
+**/qa/reports/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# ─── Variáveis de ambiente ────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ─── TypeScript ──────────────────────────────────────────────────────────────
+*.tsbuildinfo
+next-env.d.ts
+
+# ─── Deploy ──────────────────────────────────────────────────────────────────
+.vercel
+*.pem
+
+# ─── Sistema operacional ─────────────────────────────────────────────────────
+**/.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ─── IA / Agentes (não vão para produção) ────────────────────────────────────
+CLAUDE.md
+AGENTS.md
+memory/
+
+# ─── Testes / QA (não necessários em produção) ───────────────────────────────
+/qa/
+
+# ─── Editores / IDEs ─────────────────────────────────────────────────────────
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+*.code-workspace

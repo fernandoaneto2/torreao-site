@@ -77,11 +77,12 @@ export default function HomePage() {
               <a href="/orcamento" className="btn-secondary">SOLICITAR ORÇAMENTO</a>
             </div>
           </div>
-          <div className="hero-stats">
-            <div className="stat-card"><div className="stat-number">+300</div><div className="stat-label">Projetos elétricos aprovados</div></div>
-            <div className="stat-card"><div className="stat-number">+10</div><div className="stat-label">anos no mercado</div></div>
-            <div className="stat-card"><div className="stat-number">+25MW</div><div className="stat-label">Projetos de conexão</div></div>
-            <div className="stat-card"><div className="stat-number">+15</div><div className="stat-label">Cidades atendidas</div></div>
+          <div className="hero-video-wrap">
+            <div className="hero-video">
+              <video autoPlay muted loop playsInline preload="none" aria-hidden="true">
+                <source src="/videos/video-drone-solar.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </section>
@@ -94,12 +95,10 @@ export default function HomePage() {
               { src: '/images/logo-vert-fundo-branco-96px.png', alt: 'Solar Vert' },
               { src: '/images/logo-montevi-fundo-branco96px.png', alt: 'Montevi' },
               { src: '/images/Logo-DER-PB.png', alt: 'DER-PB' },
-              { src: '/images/Logo-pbsaude.png', alt: 'PB Saúde' },
               { src: '/images/logo-comtermica.png', alt: 'Comtérmica' },
               { src: '/images/logo-construdantas.jpg', alt: 'Construdantas' },
               { src: '/images/logo-distribuidora.jpg', alt: 'Distribuidora' },
               { src: '/images/logo-governo-da-paraiba.png', alt: 'Governo da Paraíba' },
-              { src: '/images/logo-mecol.webp', alt: 'Mecol' },
               { src: '/images/logo-montemorsp.png', alt: 'Monte Mor SP' },
               { src: '/images/logo-neoenergia.svg', alt: 'Neoenergia' },
               { src: '/images/logo-santenge.jpg', alt: 'Santenge' },
@@ -108,12 +107,10 @@ export default function HomePage() {
               { src: '/images/logo-vert-fundo-branco-96px.png', alt: 'Solar Vert' },
               { src: '/images/logo-montevi-fundo-branco96px.png', alt: 'Montevi' },
               { src: '/images/Logo-DER-PB.png', alt: 'DER-PB' },
-              { src: '/images/Logo-pbsaude.png', alt: 'PB Saúde' },
               { src: '/images/logo-comtermica.png', alt: 'Comtérmica' },
               { src: '/images/logo-construdantas.jpg', alt: 'Construdantas' },
               { src: '/images/logo-distribuidora.jpg', alt: 'Distribuidora' },
               { src: '/images/logo-governo-da-paraiba.png', alt: 'Governo da Paraíba' },
-              { src: '/images/logo-mecol.webp', alt: 'Mecol' },
               { src: '/images/logo-montemorsp.png', alt: 'Monte Mor SP' },
               { src: '/images/logo-neoenergia.svg', alt: 'Neoenergia' },
               { src: '/images/logo-santenge.jpg', alt: 'Santenge' },
@@ -127,12 +124,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Metrics strip */}
+      <section className="metrics-strip" aria-label="Números da Torreão Engenharia">
+        <div className="metrics-strip-grid">
+          <div className="metrics-item"><span className="metrics-num">+300</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Projetos elétricos aprovados</span></div>
+          <div className="metrics-item"><span className="metrics-num">+10</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Anos no mercado</span></div>
+          <div className="metrics-item"><span className="metrics-num">+25MW</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Em projetos de conexão</span></div>
+          <div className="metrics-item"><span className="metrics-num">+15</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Cidades atendidas</span></div>
+        </div>
+      </section>
+
       {/* About */}
       <section id="sobre" className="about">
         <div className="container">
           <div className="about-split">
             <div className="about-split-img">
-              <img src="/images/sections/about-img.jpg" alt="Equipe Torreão Engenharia em obra" loading="lazy" />
+              <img src="/images/sections/team-torreao.jpg" alt="Equipe Torreão Engenharia" loading="lazy" />
             </div>
             <div className="about-split-text">
               <h2 className="about-header-title">Somos a Torreão Engenharia</h2>
@@ -157,7 +164,7 @@ export default function HomePage() {
           <p className="section-subtitle">Especialidades para suas necessidades de engenharia, energia e segurança.</p>
           <div className="services-grid">
             <div className="service-card">
-              <figure className="service-img"><img src="/images/sections/surveillance.jpg" alt="Sistemas de vigilância" loading="lazy" /></figure>
+              <figure className="service-img"><img src="/images/sections/engenharia-civil.jpg" alt="Sistemas de vigilância" loading="lazy" /></figure>
               <h3>Sistemas de vigilância</h3>
               <p>Instalação e manutenção de sistemas de segurança eletrônica para Bancos, Indústrias, Comércio, Condomínios e residências.</p>
               <ul><li>Câmeras CFTV e monitoramento remoto</li><li>Controle de acesso e biometria</li><li>Alarmes e sensores perimetrais</li></ul>
@@ -165,7 +172,7 @@ export default function HomePage() {
               <div className="service-actions"><a href="/servicos/vigilancia" className="link-more">Ver detalhes →</a><a href="#contato" className="link-request">Solicitar orçamento</a></div>
             </div>
             <div className="service-card">
-              <figure className="service-img"><img src="/images/sections/solar.jpg" alt="Geração fotovoltaica" loading="lazy" /></figure>
+              <figure className="service-img"><img src="/images/sections/geracao-fotovoltaica1.jpeg" alt="Geração fotovoltaica" loading="lazy" /></figure>
               <h3>Geração fotovoltaica</h3>
               <p>Projetos estruturais inovadores e soluções construtivas.</p>
               <ul><li>On Grid e Off Grid</li><li>On Grid com Micro Inversor</li><li>Híbrido</li><li>Bomba Solar</li></ul>
@@ -173,7 +180,7 @@ export default function HomePage() {
               <div className="service-actions"><a href="/servicos/fotovoltaica" className="link-more">Ver detalhes →</a><a href="#contato" className="link-request">Solicitar orçamento</a></div>
             </div>
             <div className="service-card">
-              <figure className="service-img"><img src="/images/sections/engineering.jpg" alt="Projetos de engenharia BIM" loading="lazy" /></figure>
+              <figure className="service-img"><img src="/images/sections/projetos-complementares2.jpg" alt="Projetos de engenharia BIM" loading="lazy" /></figure>
               <h3>Projetos de engenharia</h3>
               <p>Projetos desenvolvidos em BIM, com modelagem 2D e 3D para máxima precisão.</p>
               <ul>
@@ -185,7 +192,7 @@ export default function HomePage() {
               <div className="service-actions"><a href="/servicos/projetos-eletricos" className="link-more">Ver detalhes →</a><a href="#contato" className="link-request">Solicitar orçamento</a></div>
             </div>
             <div className="service-card">
-              <figure className="service-img"><img src="/images/sections/ev-charger.jpg" alt="Carregadores elétricos veiculares" loading="lazy" /></figure>
+              <figure className="service-img"><img src="/images/sections/foto-carregadore-eletricos.jpg" alt="Carregadores elétricos veiculares" loading="lazy" /></figure>
               <h3>Carregadores Elétricos</h3>
               <p>Soluções completas para infraestrutura de recarga veicular.</p>
               <ul>
@@ -198,7 +205,7 @@ export default function HomePage() {
               <div className="service-actions"><a href="/servicos/carregadores-eletricos" className="link-more">Ver detalhes →</a><a href="#contato" className="link-request">Solicitar orçamento</a></div>
             </div>
             <div className="service-card">
-              <figure className="service-img"><img src="/images/sections/electrical-panel.jpg" alt="Manutenção elétrica" loading="lazy" /></figure>
+              <figure className="service-img"><img src="/images/sections/iluminacao1.jpeg" alt="Manutenção elétrica" loading="lazy" /></figure>
               <h3>Manutenção e Construção</h3>
               <p>Inteligência em infraestrutura para melhor performance dos seus sistemas.</p>
               <ul><li>Manutenção Preventiva</li><li>Manutenção Corretiva Emergencial</li><li>Reformas e Ampliações Elétricas</li><li>Laudos Técnicos e Inspeções</li><li>Modernização de Sistemas</li></ul>
@@ -206,7 +213,7 @@ export default function HomePage() {
               <div className="service-actions"><a href="/servicos/manutencao-eletrica" className="link-more">Ver detalhes →</a><a href="#contato" className="link-request">Solicitar orçamento</a></div>
             </div>
             <div className="service-card">
-              <figure className="service-img"><img src="/images/sections/substation.jpg" alt="Subestações e geradores" loading="lazy" /></figure>
+              <figure className="service-img"><img src="/images/sections/subestacao-abrigada.jpeg" alt="Subestações e geradores" loading="lazy" /></figure>
               <h3>Subestações e Geradores</h3>
               <p>Máxima confiabilidade energética e segurança operacional.</p>
               <ul><li>Manutenção Preditiva e Preventiva em Subestações</li><li>Instalação e configuração de Grupos Geradores (GMG)</li><li>Modernização de Painéis e Quadros de Transferência (QTA)</li><li>Consultoria Técnica para Eficiência Energética</li></ul>
