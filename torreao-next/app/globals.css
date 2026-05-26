@@ -186,6 +186,81 @@ h6 {
   color: var(--color-white);
 }
 
+/* ─── Serviços Dropdown ────────────────────────────── */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown__trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: inherit;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown__chevron {
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.nav-dropdown.services-open .nav-dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  min-width: 220px;
+  background: #0e0e12;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-4px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  z-index: 200;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-dropdown:hover .nav-dropdown__chevron {
+    transform: rotate(180deg);
+  }
+
+  .nav-dropdown:hover .nav-dropdown__menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.nav-dropdown__item {
+  display: block;
+  padding: 0.55rem 1.25rem;
+  font-family: Inter, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-dropdown__item:hover {
+  color: #ffffff;
+  background: rgba(139, 58, 58, 0.12);
+}
+
 .navbar-right {
   display: flex;
   align-items: center;
@@ -315,7 +390,7 @@ h6 {
     transform: translateY(0);
     transition-delay: 0.12s;
   }
-  .navbar-menu.open .nav-link:nth-child(3) {
+  .navbar-menu.open .nav-dropdown:nth-child(3) .nav-dropdown__trigger {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.17s;
@@ -334,6 +409,62 @@ h6 {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.32s;
+  }
+
+  /* Dropdown — mobile expand */
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-dropdown__trigger {
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .nav-dropdown__menu {
+    position: static;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    min-width: unset;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+    transform: none;
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .nav-dropdown.services-open .nav-dropdown__menu {
+    pointer-events: auto;
+    max-height: 400px;
+    padding: 0.75rem 0;
+  }
+
+  .nav-dropdown__item {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.55);
+    padding: 0.3rem 1rem;
+    text-align: center;
+    background: transparent;
+  }
+
+  .nav-dropdown__item:hover {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.85);
   }
 
   .navbar-menu .nav-link::after {
@@ -466,7 +597,7 @@ h6 {
       rgba(0, 0, 0, 0.82) 0%,
       rgba(26, 26, 26, 0.78) 100%
     ),
-    url("images/sections/hero-bg.jpg") center/cover no-repeat;
+    url("/images/sections/hero-bg.jpg") center/cover no-repeat;
   background-attachment: fixed, fixed;
   color: var(--color-white);
   padding: 120px 20px 80px;
@@ -1704,7 +1835,7 @@ h6 {
 
 .form-disclaimer {
   font-size: 0.8rem;
-  color: var(--color-gray);
+  color: #666666;
   margin-top: 1rem;
 }
 
@@ -2425,7 +2556,7 @@ h6 {
 }
 
 .cookie-banner a {
-  color: var(--color-wine-light);
+  color: #e07a84;
   text-decoration: underline;
 }
 
@@ -2475,7 +2606,7 @@ h6 {
   right: 10px;
   width: 72px;
   height: 36px;
-  background: url("./images/logo-torreao-menor.png") no-repeat center / contain;
+  background: url("/images/logo-torreao-menor.png") no-repeat center / contain;
   opacity: 0.75;
   pointer-events: none;
   z-index: 2;
@@ -2488,8 +2619,113 @@ h6 {
   right: 20px;
   width: 80px;
   height: 40px;
-  background: url("./images/logo-torreao-menor.png") no-repeat center / contain;
+  background: url("/images/logo-torreao-menor.png") no-repeat center / contain;
   opacity: 0.8;
   pointer-events: none;
   z-index: 2;
+}
+
+/* ===== SERVICE NORM BADGES ===== */
+.service-norms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.service-norm-badge {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  background: #0e0e10;
+  color: #fff;
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+}
+
+/* ===== FAQ SECTION ===== */
+.faq {
+  background: #f5f5f5;
+  padding: 80px 0;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.faq .section-subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #000;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  user-select: none;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.3rem;
+  color: #8b3a3a;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item[open] summary {
+  border-bottom: 1px solid #eee;
+}
+
+.faq-answer {
+  padding: 1.25rem 1.5rem;
+}
+
+.faq-answer p {
+  color: #666;
+  line-height: 1.75;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

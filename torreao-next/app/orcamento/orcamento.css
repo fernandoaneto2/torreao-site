@@ -1,0 +1,39 @@
+.orc-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+    url("/images/sections/hero-bg.jpg") center/cover no-repeat;
+  padding: 140px 20px 80px;
+  text-align: center;
+  color: #fff;
+}
+.orc-hero .orc-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8b3a3a;
+  border-bottom: 2px solid #8b3a3a;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+.orc-hero h1 { font-size: 2.4rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; }
+.orc-hero p { font-size: 1.05rem; color: #ccc; max-width: 560px; margin: 0 auto 0.5rem; line-height: 1.7; }
+.orc-hero .orc-trust { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+.orc-hero .orc-trust span { font-size: 0.82rem; color: #aaa; display: flex; align-items: center; gap: 0.3rem; }
+.orc-hero .orc-trust span::before { content: "✓"; color: #8b3a3a; font-weight: 700; }
+.orc-body { max-width: 960px; margin: 0 auto; padding: 60px 20px 80px; }
+.orc-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; align-items: start; }
+.orc-info h2 { font-size: 1.3rem; font-weight: 700; color: #000; margin-bottom: 1rem; }
+.orc-info p { color: #666; line-height: 1.75; margin-bottom: 1.5rem; font-size: 0.95rem; }
+.orc-contact-list { list-style: none; padding: 0; margin: 0 0 2rem; }
+.orc-contact-list li { padding: 0.75rem 0; border-bottom: 1px solid #eee; font-size: 0.9rem; color: #444; line-height: 1.5; }
+.orc-contact-list li strong { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: #8b3a3a; margin-bottom: 0.2rem; }
+.orc-wa-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #0f7838; color: #fff; font-weight: 700; font-size: 0.9rem; padding: 0.85rem 1.5rem; border-radius: 6px; text-decoration: none; transition: background 0.2s; }
+.orc-wa-btn:hover { background: #0a5e2c; }
+.orc-form-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+.orc-form-card h3 { font-size: 1.1rem; font-weight: 700; color: #000; margin-bottom: 1.5rem; }
+@media (max-width: 700px) {
+  .orc-grid { grid-template-columns: 1fr; }
+  .orc-hero h1 { font-size: 1.7rem; }
+  .orc-body { padding: 40px 16px 60px; }
+}
