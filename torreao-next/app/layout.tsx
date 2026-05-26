@@ -18,7 +18,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="icon" href="/images/logo-torreao-menor.png" type="image/png" sizes="32x32" />
       </head>
       <body>
         {children}

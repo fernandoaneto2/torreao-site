@@ -67,10 +67,7 @@ export default function HomePage() {
             </p>
             <ul className="hero-badges" aria-label="Credenciais">
               {['CREA Ativo', 'NR-10 / NBR 5410', 'SPDA NBR 5419', 'NR-35', 'Entrega no Prazo'].map((b) => (
-                <li key={b} className="badge">
-                  <span aria-hidden="true" style={{ color: '#8b3a3a', fontWeight: 700 }}>✓</span>
-                  {b}
-                </li>
+                <li key={b} className="badge">{b}</li>
               ))}
             </ul>
             <div className="hero-buttons buttons-wrapper">
