@@ -66,7 +66,7 @@ export default function HomePage() {
               técnica do início ao fim, com a <strong>Torreão Engenharia</strong>.
             </p>
             <ul className="hero-badges" aria-label="Credenciais">
-              {['CREA Ativo', 'NR-10 / NBR 5410', 'SPDA NBR 5419', 'NR-35', 'Entrega no Prazo'].map((b) => (
+              {['CREA Ativo', 'NR-10 / NBR 5410', 'SPDA NBR 5419', 'NR-35'].map((b) => (
                 <li key={b} className="badge">{b}</li>
               ))}
             </ul>

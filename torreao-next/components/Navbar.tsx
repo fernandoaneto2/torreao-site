@@ -87,7 +87,7 @@ export default function Navbar() {
           <a href={`${base}#contato`} className="nav-link" onClick={closeMenu}>Contato</a>
         </nav>
         <div className="navbar-right">
-          <a href="/orcamento" className="btn-primary navbar-cta">SOLICITAR ORÇAMENTO</a>
+          <a href="/orcamento" className="navbar-cta">SOLICITAR ORÇAMENTO</a>
         </div>
         <button
           className={`hamburger${isOpen ? ' active' : ''}`}
