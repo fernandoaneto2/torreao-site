@@ -760,7 +760,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-video {
   border-radius: 18px;
   overflow: hidden;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   position: relative;
   box-shadow: 0 28px 72px rgba(0, 0, 0, 0.72), 0 0 0 1px rgba(255,255,255,0.05);
   z-index: 1;
@@ -938,7 +938,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-video {
-    aspect-ratio: 16/9;
     border-radius: 12px;
     max-width: 600px;
   }
@@ -954,7 +953,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-video {
-    aspect-ratio: 16/9;
     border-radius: 10px;
   }
 
