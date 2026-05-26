@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # ─── Dependências ────────────────────────────────────────────────────────────
 /node_modules
 /.pnp
@@ -17,6 +15,7 @@
 
 # ─── Testes e QA ─────────────────────────────────────────────────────────────
 /coverage
+/qa/
 /qa/reports/
 **/qa/reports/
 /test-results/
@@ -54,14 +53,30 @@ $RECYCLE.BIN/
 CLAUDE.md
 AGENTS.md
 memory/
-
-# ─── Testes / QA (não necessários em produção) ───────────────────────────────
-/qa/
+.claude/
 
 # ─── Editores / IDEs ─────────────────────────────────────────────────────────
 .idea/
+.vscode/
 *.iml
 *.swp
 *.swo
 *~
 *.code-workspace
+
+# ─── Arquivos legados do site estático e pasta Next.js migrada ───────────────
+images/
+script.js
+servicos-styles.css
+style.css
+torreao-next/
+
+# ─── Pasta de trabalho (imagens brutas de referência) ───────────────────────
+public/Images\ -\ montevi/
+
+# ─── SVGs padrão Next.js (não utilizados) ────────────────────────────────────
+public/file.svg
+public/globe.svg
+public/next.svg
+public/vercel.svg
+public/window.svg
