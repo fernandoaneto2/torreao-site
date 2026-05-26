@@ -591,14 +591,7 @@ h6 {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.82) 0%,
-      rgba(26, 26, 26, 0.78) 100%
-    ),
-    url("/images/sections/hero-bg.jpg") center/cover no-repeat;
-  background-attachment: fixed, fixed;
+  background: linear-gradient(155deg, #0a0a0a 0%, #0f0708 55%, #160c0c 100%);
   color: var(--color-white);
   padding: 120px 20px 80px;
   position: relative;
@@ -613,11 +606,9 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-    circle at 20% 50%,
-    rgba(139, 58, 58, 0.1) 0%,
-    transparent 50%
-  );
+  background:
+    radial-gradient(ellipse at 12% 65%, rgba(139, 58, 58, 0.18) 0%, transparent 52%),
+    radial-gradient(ellipse at 80% 15%, rgba(100, 30, 30, 0.08) 0%, transparent 45%);
   pointer-events: none;
 }
 
@@ -633,67 +624,62 @@ h6 {
 }
 
 .hero-subtitle {
-  color: var(--color-wine);
-  font-size: 0.85rem;
-  font-weight: 600;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1.5px solid #8b3a3a;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero-title {
-  font-size: 1.8rem;
-  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.9rem, 3.2vw, 2.85rem);
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
   margin-bottom: 1.5rem;
   color: var(--color-white);
 }
 
 .hero-title-gradient {
-  /* Gradiente do Branco (#FFFFFF) para um Prata Metálico (#C0C0C0) */
-  background: linear-gradient(to right, #ffffff 0%, #e0e0e0 50%, #c0c0c0 100%);
-
-  /* Mascaramento para o texto */
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* Transparência para exibir o fundo */
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-
-  /* Estilização para parecer metalizado */
+  color: #c0504d;
   font-weight: 700;
-  /* font-size: 3rem; */
-
-  /* Opcional: um leve contorno ou sombra para destacar no fundo branco */
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .hero-description {
-  font-size: 1.1rem;
-  font-family: "Montserrat", sans-serif;
-  color: var(--color-gray);
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.68);
   margin-bottom: 1.5rem;
-  line-height: 1.8;
+  line-height: 1.75;
+  max-width: 480px;
 }
 
 .hero-badges {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
   display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
+  gap: 1rem 1.5rem;
 }
 
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--color-dark-gray);
-  border-radius: 4px;
-  font-size: 0.85rem;
-  color: var(--color-gray);
+  gap: 0.4rem;
+  padding: 0 0;
+  font-family: Inter, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  border: none;
+  background: none;
+  border-radius: 0;
 }
 
 .hero-buttons {
@@ -718,31 +704,35 @@ h6 {
 }
 
 .stat-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(139, 58, 58, 0.3);
-  padding: 2rem;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 1.75rem 1.5rem;
+  border-radius: 10px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: border-color 0.25s ease, background 0.25s ease;
 }
 
 .stat-card:hover {
-  background-color: rgba(139, 58, 58, 0.1);
-  border-color: var(--color-wine);
-  transform: translateY(-5px);
+  background: rgba(139, 58, 58, 0.07);
+  border-color: rgba(139, 58, 58, 0.35);
 }
 
 .stat-number {
-  font-size: 2.5rem;
+  font-family: Inter, sans-serif;
+  font-size: 2.2rem;
   font-weight: 700;
-  color: var(--color-wine);
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1;
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
-  font-size: 0.9rem;
-  color: var(--color-gray);
-  line-height: 1.6;
+  font-family: Inter, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.45;
 }
 
 .scroll-indicator {
@@ -2638,8 +2628,9 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  background: #0e0e10;
-  color: #fff;
+  background: transparent;
+  color: #8b3a3a;
+  border: 1.5px solid #8b3a3a;
   padding: 0.2rem 0.55rem;
   border-radius: 3px;
 }

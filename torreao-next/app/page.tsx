@@ -65,13 +65,14 @@ export default function HomePage() {
               laudos técnicos com responsabilidade do engenheiro e ART — para que sua obra tenha segurança jurídica e
               técnica do início ao fim, com a <strong>Torreão Engenharia</strong>.
             </p>
-            <div className="hero-badges">
-              <span className="badge">✓ CREA Ativo</span>
-              <span className="badge">✓ NR-10 / NBR 5410</span>
-              <span className="badge">✓ SPDA NBR 5419</span>
-              <span className="badge">✓ NR-35</span>
-              <span className="badge">✓ Entrega no Prazo</span>
-            </div>
+            <ul className="hero-badges" aria-label="Credenciais">
+              {['CREA Ativo', 'NR-10 / NBR 5410', 'SPDA NBR 5419', 'NR-35', 'Entrega no Prazo'].map((b) => (
+                <li key={b} className="badge">
+                  <span aria-hidden="true" style={{ color: '#8b3a3a', fontWeight: 700 }}>✓</span>
+                  {b}
+                </li>
+              ))}
+            </ul>
             <div className="hero-buttons buttons-wrapper">
               <a href="https://wa.me/5511922763114?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento" className="btn-whatsapp" id="heroWhatsAppBtn" target="_blank" rel="noopener">
                 CHAMAR NO WHATSAPP
