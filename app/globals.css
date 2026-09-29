@@ -3070,33 +3070,30 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-/* ===== HERO — VÍDEO EM TELA CHEIA (TESTE) =====
-   Vídeo de ponta a ponta como fundo, com título, texto e CTAs por cima em uma coluna. */
+/* ===== HERO — TELA CHEIA DIVIDIDA =====
+   Texto em coluna escura à esquerda; vídeo solar ocupa toda a metade direita,
+   enquadrado nas placas (o texto nunca fica por cima delas). */
 .hero.hero--fullscreen {
   display: flex;
   align-items: center;
   min-height: 100vh;
   min-height: 100svh;
   padding: 0;
-  background: #0a0a0a;
+  background: #0b0b0b;
   color: #ffffff;
 }
 
-.hero.hero--fullscreen::before {
-  /* camada escura para garantir leitura do texto sobre o vídeo */
-  z-index: 1;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.15) 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, transparent 40%);
-}
-
+.hero.hero--fullscreen::before,
 .hero.hero--fullscreen::after {
   display: none;
 }
 
 .hero-bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 56%;
   z-index: 0;
 }
 
@@ -3104,7 +3101,19 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 12% 60%; /* centraliza as placas solares */
   display: block;
+}
+
+.hero-bg::before {
+  /* transição suave entre a coluna de texto e o vídeo */
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 12%;
+  background: linear-gradient(90deg, #0b0b0b 0%, rgba(11, 11, 11, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-content.hero-content--overlay {
@@ -3112,12 +3121,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 140px clamp(24px, 6vw, 72px) 96px;
+  padding: 130px clamp(24px, 5vw, 72px) 80px;
+  position: relative;
   z-index: 2;
 }
 
 .hero-content--overlay .hero-text {
-  max-width: 840px;
+  max-width: 46%;
 }
 
 .hero-content--overlay .hero-subtitle {
@@ -3126,8 +3136,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-content--overlay .hero-title {
-  font-size: clamp(2.1rem, 4vw, 3.4rem);
-  line-height: 1.08;
+  font-size: clamp(2rem, 3.4vw, 3.1rem);
+  line-height: 1.1;
   letter-spacing: -0.5px;
   text-wrap: balance;
   color: #ffffff;
@@ -3140,9 +3150,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-content--overlay .hero-description {
-  max-width: 580px;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.78);
   text-align: left;
+  max-width: none;
 }
 
 .hero-content--overlay .hero-description strong {
@@ -3150,34 +3160,70 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-content--overlay .badge {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-content--overlay .hero-buttons {
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-content--overlay .hero-buttons .btn-whatsapp,
+.hero-content--overlay .hero-buttons .btn-secondary {
+  padding: 0 1.15rem;
 }
 
 .hero-content--overlay .hero-buttons .btn-secondary {
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.55);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .hero-content--overlay .hero-buttons .btn-secondary:hover {
   border-color: #ffffff;
-  background: rgba(255, 255, 255, 0.12);
 }
 
 .hero-content--overlay .hero-cta-note {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.65);
 }
 
-@media (max-width: 768px) {
+/* Tablet e celular: vídeo em cima (placas em destaque), texto embaixo */
+@media (max-width: 1024px) {
   .hero.hero--fullscreen {
-    align-items: flex-end;
+    display: block;
+    min-height: auto;
   }
 
-  .hero.hero--fullscreen::before {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 55%, rgba(0, 0, 0, 0.3) 100%);
+  .hero-bg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: 48vh;
+    margin-top: 88px; /* altura da navbar */
+  }
+
+  .hero-bg video {
+    object-position: 40% 65%;
+  }
+
+  .hero-bg::before {
+    inset: auto 0 0 0;
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(0deg, #0b0b0b 0%, rgba(11, 11, 11, 0) 100%);
   }
 
   .hero-content.hero-content--overlay {
-    padding: 110px 16px 40px;
+    padding: 8px clamp(16px, 5vw, 48px) 48px;
+  }
+
+  .hero-content--overlay .hero-text {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-bg {
+    margin-top: 64px;
   }
 }

@@ -55,7 +55,7 @@ export default function HomePage() {
       {/* Hero */}
       <section id="inicio" className="hero hero--fullscreen">
         <div className="hero-bg" aria-hidden="true">
-          <video autoPlay muted loop playsInline preload="none" poster="/images/services/geracao-fotovoltaica3.jpeg">
+          <video autoPlay muted loop playsInline preload="none" poster="/images/hero-solar-poster.jpg">
             <source src="/videos/video-drone-solar.mp4" type="video/mp4" />
           </video>
         </div>
