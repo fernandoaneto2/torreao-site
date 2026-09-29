@@ -31,7 +31,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`navbar${scrolled ? ' scrolled' : ''}`}>
+    <header className={`navbar${scrolled ? ' scrolled' : ''}${pathname === '/' && !scrolled && !isOpen ? ' navbar--transparent' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
           <a className="logo-link" href={pathname === '/' ? '#inicio' : '/'}>
