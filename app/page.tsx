@@ -7,6 +7,8 @@ import ContactForm from '@/components/ContactForm';
 import PortfolioFilter from '@/components/PortfolioFilter';
 import ModalTriggerButton from '@/components/ModalTriggerButton';
 import ScrollInit from '@/components/ScrollInit';
+import HeroSlider from '@/components/HeroSlider';
+import PaybackSection from '@/components/PaybackSection';
 
 export const metadata: Metadata = {
   title: { absolute: 'Torreão Engenharia — Projetos Elétricos, SPDA e Laudos NR-10' },
@@ -53,40 +55,7 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero */}
-      <section id="inicio" className="hero hero--light">
-        <div className="hero-content">
-          <div className="hero-text">
-            <p className="hero-subtitle">ENGENHARIA ELÉTRICA COM SEGURANÇA NORMATIZADA</p>
-            <h1 className="hero-title">
-              Construímos o Futuro <span className="hero-title-gradient">com Precisão.</span>
-            </h1>
-            <p className="hero-description">
-              Especialistas em projetos elétricos com conformidade às normas NR-10, NBR 5410 e NBR 5419 (SPDA). Emitimos
-              laudos técnicos com responsabilidade do engenheiro e ART — para que sua obra tenha segurança jurídica e
-              técnica do início ao fim, com a <strong>Torreão Engenharia</strong>.
-            </p>
-            <ul className="hero-badges" aria-label="Credenciais">
-              {['CREA Ativo', 'NR-10 / NBR 5410', 'SPDA NBR 5419', 'NR-35'].map((b) => (
-                <li key={b} className="badge">{b}</li>
-              ))}
-            </ul>
-            <div className="hero-buttons buttons-wrapper">
-              <a href="https://wa.me/5511922763114?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20t%C3%A9cnica%20gratuita" className="btn-whatsapp" id="heroWhatsAppBtn" target="_blank" rel="noopener">
-                CHAMAR NO WHATSAPP
-              </a>
-              <a href="/orcamento" className="btn-secondary">AGENDAR AVALIAÇÃO GRATUITA</a>
-            </div>
-            <p className="hero-cta-note">Nossos engenheiros vão até o local · Sem custo e sem compromisso</p>
-          </div>
-          <div className="hero-video-wrap">
-            <div className="hero-video">
-              <video autoPlay muted loop playsInline preload="none" aria-hidden="true">
-                <source src="/videos/video-drone-solar.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       {/* Partners Marquee */}
       <section className="partners-marquee">
@@ -124,6 +93,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Payback */}
+      <PaybackSection />
 
       {/* Metrics strip */}
       <section className="metrics-strip" aria-label="Números da Torreão Engenharia">
