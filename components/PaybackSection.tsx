@@ -94,6 +94,18 @@ const PROJETOS: Projeto[] = [
     payback: '0 anos',
     potencia: '0 kW',
   },
+  {
+    categoria: 'Carregador Elétrico',
+    imagem: '/images/hero/carregador-veicular-volvo.jpg',
+    alt: 'Carregador veicular Volvo Enel X com quadro de proteção dedicado',
+    titulo: 'Nome do projeto',
+    local: 'Cidade / UF',
+    descricao: 'Laudo com estudo de carga, projeto, ART e instalação.',
+    investimento: 'R$ 00.000',
+    economiaMensal: 'R$ 000',
+    payback: '0 anos',
+    potencia: '0 kW',
+  },
 ];
 
 export default function PaybackSection() {

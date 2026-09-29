@@ -64,6 +64,14 @@ const SLIDES: Slide[] = [
     subtitle: 'Título placeholder do projeto',
     position: '50% 55%',
   },
+  {
+    type: 'image',
+    src: '/images/hero/carregador-veicular-volvo.jpg',
+    alt: 'Carregador veicular Volvo Enel X com quadro de proteção dedicado',
+    title: 'Wallbox Residencial',
+    subtitle: 'Título placeholder do projeto',
+    position: '30% 22%',
+  },
 ];
 
 const AUTOPLAY_MS = 7000;
