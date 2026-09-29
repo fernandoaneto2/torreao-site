@@ -187,3 +187,15 @@
   .payback { padding: 72px 16px; }
   .payback-grid { grid-template-columns: 1fr; }
 }
+
+/* O .btn-primary global é pensado para fundo escuro; aqui a seção é branca */
+.payback-cta .btn-primary {
+  background: var(--color-wine);
+  border-color: var(--color-wine);
+  color: #ffffff;
+}
+
+.payback-cta .btn-primary:hover {
+  background: var(--color-wine-dark);
+  border-color: var(--color-wine-dark);
+}

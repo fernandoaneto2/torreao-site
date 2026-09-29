@@ -65,7 +65,7 @@ memory/
 *.code-workspace
 
 # ─── Arquivos legados do site estático e pasta Next.js migrada ───────────────
-images/
+/images/
 script.js
 servicos-styles.css
 style.css
