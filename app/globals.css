@@ -3050,3 +3050,22 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 84px;
   }
 }
+
+/* Título do hero: destaque sempre em linha própria (evita quebra solta) */
+.hero-content--stacked .hero-title {
+  font-size: clamp(1.9rem, 3vw, 2.65rem);
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  text-wrap: balance;
+}
+
+@media (min-width: 1025px) {
+  .hero-content--stacked .hero-text {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 1.5rem 3.5rem;
+  }
+}
+
+.hero-content--stacked .hero-title-gradient {
+  display: block;
+}

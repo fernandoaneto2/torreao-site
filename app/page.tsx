@@ -64,16 +64,16 @@ export default function HomePage() {
           </div>
           <div className="hero-text">
             <div className="hero-text-head">
-              <p className="hero-subtitle">ENGENHARIA ELÉTRICA COM SEGURANÇA NORMATIZADA</p>
+              <p className="hero-subtitle">ENERGIA SOLAR · RECARGA VEICULAR · SUBESTAÇÕES</p>
               <h1 className="hero-title">
-                Construímos o Futuro <span className="hero-title-gradient">com Precisão.</span>
+                Engenharia elétrica sem riscos, <span className="hero-title-gradient">do projeto à ligação.</span>
               </h1>
             </div>
             <div className="hero-text-body">
               <p className="hero-description">
-                Especialistas em projetos elétricos com conformidade às normas NR-10, NBR 5410 e NBR 5419 (SPDA). Emitimos
-                laudos técnicos com responsabilidade do engenheiro e ART — para que sua obra tenha segurança jurídica e
-                técnica do início ao fim, com a <strong>Torreão Engenharia</strong>.
+                Engenheiros e técnicos próprios cuidam de tudo: projeto, aprovação na concessionária, execução e laudos com
+                ART — em conformidade com NR-10, NBR 5410 e NBR 5419. Uma única equipe responsável, do começo ao fim, com a{' '}
+                <strong>Torreão Engenharia</strong>.
               </p>
               <ul className="hero-badges" aria-label="Credenciais">
                 {['CREA Ativo', 'NR-10 / NBR 5410', 'SPDA NBR 5419', 'NR-35'].map((b) => (
