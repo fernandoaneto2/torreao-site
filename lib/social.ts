@@ -1,5 +1,5 @@
 // Links das redes sociais usados no hero e nos botões flutuantes.
-// ⚠️ Instagram e Facebook: confirmar os endereços oficiais da Torreão Engenharia.
+// Perfis oficiais confirmados pela Torreão Engenharia.
 export const SOCIAL = {
   whatsapp: 'https://wa.me/5511922763114?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20t%C3%A9cnica%20gratuita',
   instagram: 'https://www.instagram.com/torreaoengenharia/',
