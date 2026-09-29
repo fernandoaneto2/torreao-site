@@ -209,8 +209,8 @@
 
 .hs-counter__bar {
   position: relative;
-  width: 90px;
-  height: 1px;
+  width: 120px;
+  height: 2px;
   background: rgba(255, 255, 255, 0.3);
   overflow: hidden;
 }
@@ -223,7 +223,6 @@
   animation: hs-progress linear forwards;
 }
 
-.hs-counter__fill.is-paused { animation-play-state: paused; }
 
 @keyframes hs-progress {
   from { transform: scaleX(0); }
@@ -277,5 +276,4 @@
     transform: none !important;
   }
 
-  .hs-counter__fill { animation: none; }
 }
