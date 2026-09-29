@@ -53,41 +53,35 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero */}
-      <section id="inicio" className="hero hero--light">
-        <div className="hero-content hero-content--stacked">
-          <div className="hero-video-wrap">
-            <div className="hero-video">
-              <video autoPlay muted loop playsInline preload="none" aria-hidden="true">
-                <source src="/videos/video-drone-solar.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
+      <section id="inicio" className="hero hero--fullscreen">
+        <div className="hero-bg" aria-hidden="true">
+          <video autoPlay muted loop playsInline preload="none" poster="/images/services/geracao-fotovoltaica3.jpeg">
+            <source src="/videos/video-drone-solar.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="hero-content hero-content--overlay">
           <div className="hero-text">
-            <div className="hero-text-head">
-              <p className="hero-subtitle">ENERGIA SOLAR · RECARGA VEICULAR · SUBESTAÇÕES</p>
-              <h1 className="hero-title">
-                Engenharia elétrica sem riscos, <span className="hero-title-gradient">do projeto à ligação.</span>
-              </h1>
+            <p className="hero-subtitle">ENERGIA SOLAR · RECARGA VEICULAR · SUBESTAÇÕES</p>
+            <h1 className="hero-title">
+              Engenharia elétrica sem riscos, <span className="hero-title-gradient">do projeto à ligação.</span>
+            </h1>
+            <p className="hero-description">
+              Engenheiros e técnicos próprios cuidam de tudo: projeto, aprovação na concessionária, execução e laudos com
+              ART — em conformidade com NR-10, NBR 5410 e NBR 5419. Uma única equipe responsável, do começo ao fim, com a{' '}
+              <strong>Torreão Engenharia</strong>.
+            </p>
+            <ul className="hero-badges" aria-label="Credenciais">
+              {['CREA Ativo', 'NR-10 / NBR 5410', 'SPDA NBR 5419', 'NR-35'].map((b) => (
+                <li key={b} className="badge">{b}</li>
+              ))}
+            </ul>
+            <div className="hero-buttons buttons-wrapper">
+              <a href="https://wa.me/5511922763114?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20t%C3%A9cnica%20gratuita" className="btn-whatsapp" id="heroWhatsAppBtn" target="_blank" rel="noopener">
+                CHAMAR NO WHATSAPP
+              </a>
+              <a href="/orcamento" className="btn-secondary">AGENDAR AVALIAÇÃO GRATUITA</a>
             </div>
-            <div className="hero-text-body">
-              <p className="hero-description">
-                Engenheiros e técnicos próprios cuidam de tudo: projeto, aprovação na concessionária, execução e laudos com
-                ART — em conformidade com NR-10, NBR 5410 e NBR 5419. Uma única equipe responsável, do começo ao fim, com a{' '}
-                <strong>Torreão Engenharia</strong>.
-              </p>
-              <ul className="hero-badges" aria-label="Credenciais">
-                {['CREA Ativo', 'NR-10 / NBR 5410', 'SPDA NBR 5419', 'NR-35'].map((b) => (
-                  <li key={b} className="badge">{b}</li>
-                ))}
-              </ul>
-              <div className="hero-buttons buttons-wrapper">
-                <a href="https://wa.me/5511922763114?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20t%C3%A9cnica%20gratuita" className="btn-whatsapp" id="heroWhatsAppBtn" target="_blank" rel="noopener">
-                  CHAMAR NO WHATSAPP
-                </a>
-                <a href="/orcamento" className="btn-secondary">AGENDAR AVALIAÇÃO GRATUITA</a>
-              </div>
-              <p className="hero-cta-note">Nossos engenheiros vão até o local · Sem custo e sem compromisso</p>
-            </div>
+            <p className="hero-cta-note">Nossos engenheiros vão até o local · Sem custo e sem compromisso</p>
           </div>
         </div>
       </section>
