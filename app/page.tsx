@@ -53,18 +53,20 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero */}
-      <section id="inicio" className="hero hero--fullscreen">
-        <div className="hero-bg" aria-hidden="true">
-          <video autoPlay muted loop playsInline preload="none" poster="/images/hero-solar-poster.jpg">
-            <source src="/videos/video-drone-solar.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className="hero-content hero-content--overlay">
+      <section id="inicio" className="hero hero--light">
+        <div className="hero-content hero-content--column">
+          <h1 className="hero-title">
+            Engenharia elétrica sem riscos, <span className="hero-title-gradient">do projeto à ligação.</span>
+          </h1>
+          <div className="hero-video-wrap">
+            <div className="hero-video">
+              <video autoPlay muted loop playsInline preload="none" poster="/images/hero-solar-poster.jpg" aria-hidden="true">
+                <source src="/videos/video-drone-solar.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
           <div className="hero-text">
             <p className="hero-subtitle">ENERGIA SOLAR · RECARGA VEICULAR · SUBESTAÇÕES</p>
-            <h1 className="hero-title">
-              Engenharia elétrica sem riscos, <span className="hero-title-gradient">do projeto à ligação.</span>
-            </h1>
             <p className="hero-description">
               Engenheiros e técnicos próprios cuidam de tudo: projeto, aprovação na concessionária, execução e laudos com
               ART — em conformidade com NR-10, NBR 5410 e NBR 5419. Uma única equipe responsável, do começo ao fim, com a{' '}
