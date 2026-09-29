@@ -2830,3 +2830,159 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   border: 0;
 }
+
+/* ===== HERO — VARIANTE CLARA (TESTE) =====
+   Ativada pela classe "hero--light" em app/page.tsx.
+   Para voltar ao fundo escuro original, basta remover "hero--light" da <section id="inicio">. */
+.hero.hero--light {
+  background: #ffffff;
+  color: var(--color-dark);
+}
+
+.hero.hero--light::before {
+  background:
+    radial-gradient(ellipse at 12% 65%, rgba(139, 58, 58, 0.06) 0%, transparent 52%),
+    radial-gradient(ellipse at 78% 30%, rgba(139, 58, 58, 0.04) 0%, transparent 48%);
+}
+
+.hero.hero--light::after {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+.hero--light .hero-subtitle {
+  color: #1a1a1a;
+}
+
+.hero--light .hero-title {
+  color: #111111;
+}
+
+.hero--light .hero-title-gradient {
+  color: #8b3a3a;
+}
+
+.hero--light .hero-description {
+  color: #555555;
+}
+
+.hero--light .hero-description strong {
+  color: #111111;
+}
+
+.hero--light .badge {
+  color: #666666;
+}
+
+.hero--light .hero-buttons .btn-secondary {
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.hero--light .hero-buttons .btn-secondary:hover {
+  color: #000000;
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero--light .hero-video {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.hero--light .hero-cta-note {
+  color: #666666;
+}
+
+/* Nota abaixo dos botões do hero (avaliação gratuita) */
+.hero-cta-note {
+  margin-top: 0.9rem;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===== SERVIÇOS — BOTÃO "VER DETALHES" ===== */
+.service-actions {
+  gap: 0.9rem;
+}
+
+.link-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.link-more__label {
+  display: inline-flex;
+  align-items: center;
+  height: 46px;
+  padding: 0 1.4rem;
+  border-radius: 999px;
+  background: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  color: #ffffff;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.link-more__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--color-wine);
+  color: #ffffff;
+  transform: rotate(45deg);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.link-more:hover .link-more__label {
+  background: #000000;
+  border-color: #000000;
+}
+
+.link-more:hover .link-more__icon {
+  background: var(--color-wine-dark);
+  transform: rotate(90deg);
+}
+
+.link-more:focus-visible {
+  outline: 2px solid var(--color-wine);
+  outline-offset: 4px;
+  border-radius: 999px;
+}
+
+/* ===== PROCESSO — ETAPA 01 EM DESTAQUE (AVALIAÇÃO GRATUITA) ===== */
+.process-step--highlight {
+  background: #ffffff;
+  border: 1.5px solid var(--color-wine);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(139, 58, 58, 0.12);
+}
+
+.step-tag {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(139, 58, 58, 0.1);
+  color: var(--color-wine);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* CTAs com texto mais longo ("Agendar avaliação gratuita") no mobile */
+@media (max-width: 480px) {
+  .btn-primary {
+    height: auto;
+    min-height: 46px;
+    padding: 0.8rem 1rem;
+    white-space: normal;
+    line-height: 1.3;
+  }
+}

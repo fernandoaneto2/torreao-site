@@ -29,9 +29,9 @@ export default function OrcamentoPage() {
       <Navbar />
 
       <div className="orc-hero">
-        <span className="orc-tag">Orçamento Gratuito</span>
-        <h1>Fale com um Engenheiro Especializado</h1>
-        <p>Preencha o formulário ou chame no WhatsApp. Retornamos em até 24 horas com proposta técnica personalizada.</p>
+        <span className="orc-tag">Avaliação Gratuita</span>
+        <h1>Agende sua Avaliação Técnica Gratuita</h1>
+        <p>Nossos engenheiros e técnicos vão até o local avaliar sua necessidade antes de qualquer orçamento — sem custo e sem compromisso. Preencha o formulário ou chame no WhatsApp.</p>
         <div className="orc-trust">
           <span>CREA Ativo</span>
           <span>NR-10 / NBR 5410</span>
