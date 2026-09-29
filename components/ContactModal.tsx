@@ -47,7 +47,7 @@ export default function ContactModal() {
         <button ref={closeRef} className="modal-close" aria-label="Fechar modal" onClick={() => setOpen(false)}>
           &times;
         </button>
-        <h2 id="modalTitle">Solicitar Orçamento Gratuito</h2>
+        <h2 id="modalTitle">Agende sua Avaliação Gratuita</h2>
         <ContactForm
           formId="modalForm"
           textareaPlaceholder="Descreva seu projeto..."

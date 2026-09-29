@@ -3,7 +3,7 @@ import './metricas-faixa.css';
 // TODO: cliente confirma os valores e labels das métricas
 const METRICAS = [
   { valor: '+300', label: 'Projetos elétricos aprovados' },
-  { valor: '+10',  label: 'anos no mercado' },
+  { valor: '+6',   label: 'anos no mercado' },
   { valor: '+25MW', label: 'Projetos de conexão' },
   { valor: '+15',  label: 'cidades atendidas' },
 ];

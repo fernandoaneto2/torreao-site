@@ -2,7 +2,7 @@
 const BADGES = [
   'CREA Ativo',
   'ART emitida',
-  '+10 anos no mercado',
+  '+6 anos no mercado',
 ];
 
 export default function BadgesCredibilidade() {

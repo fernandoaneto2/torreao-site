@@ -31,7 +31,7 @@ interface Props {
   onSuccess?: () => void;
 }
 
-export default function ContactForm({ formId, submitLabel = 'FALAR CONOSCO', textareaPlaceholder, onSuccess }: Props) {
+export default function ContactForm({ formId, submitLabel = 'AGENDAR AVALIAÇÃO GRATUITA', textareaPlaceholder, onSuccess }: Props) {
   const [fields, setFields] = useState({ nome: '', telefone: '', email: '', servico: '', mensagem: '' });
 
   function set(k: keyof typeof fields, v: string) {
@@ -42,7 +42,7 @@ export default function ContactForm({ formId, submitLabel = 'FALAR CONOSCO', tex
     e.preventDefault();
     const suffix = getUtmSuffix();
     const msg =
-      `Olá! Gostaria de um orçamento.\n\n` +
+      `Olá! Gostaria de agendar uma avaliação técnica gratuita.\n\n` +
       `Nome: ${fields.nome}\nTelefone: ${fields.telefone}\nE-mail: ${fields.email}\nServiço: ${fields.servico}\n\nProjeto:\n${fields.mensagem}` +
       suffix;
     window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
