@@ -24,7 +24,7 @@ type Projeto = {
 const PROJETOS: Projeto[] = [
   {
     categoria: 'Energia Solar',
-    imagem: '/images/hero-solar-poster.jpg',
+    imagem: '/images/hero/usina-solar-laje.jpg',
     alt: 'Usina solar em solo vista de drone',
     titulo: 'Nome do projeto',
     local: 'Cidade / UF',
