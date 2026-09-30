@@ -258,6 +258,7 @@
 
 .payback-modal__subtitle {
   margin: 0.35rem 0 1.1rem;
+  text-align: left;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-wine);

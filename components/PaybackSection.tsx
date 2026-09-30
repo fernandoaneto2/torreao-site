@@ -1,7 +1,7 @@
 'use client';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import ModalTriggerButton from './ModalTriggerButton';
-import { ABRIR_PROJETO_EVENT, PROJETOS, type Projeto } from '@/lib/projetos';
+import { ABRIR_PROJETO_EVENT, PROJETOS_PAYBACK, type Projeto } from '@/lib/projetos';
 import './payback-section.css';
 
 function Tag({ categoria }: { categoria: Projeto['categoria'] }) {
@@ -29,8 +29,12 @@ export default function PaybackSection() {
   // Abre um card pelo slug: rola até ele e amplia (usado pelo "Saiba mais" do hero e por links #projeto-<slug>)
   const abrirPorSlug = useCallback(
     (slug: string) => {
-      const p = PROJETOS.find((x) => x.slug === slug);
-      if (!p) return;
+      const p = PROJETOS_PAYBACK.find((x) => x.slug === slug);
+      if (!p) {
+        // projeto ainda sem card (aguardando dados): leva para o início da seção
+        document.getElementById('payback')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
       document.getElementById(`projeto-${slug}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       window.setTimeout(() => abrir(p), 450);
     },
@@ -81,7 +85,7 @@ export default function PaybackSection() {
         </p>
 
         <div className="payback-grid">
-          {PROJETOS.map((p) => (
+          {PROJETOS_PAYBACK.map((p) => (
             <button
               key={p.slug}
               id={`projeto-${p.slug}`}
@@ -154,7 +158,9 @@ export default function PaybackSection() {
               ) : (
                 <p className="payback-modal__nodata">Os dados de geração e economia deste projeto serão publicados em breve.</p>
               )}
-              {aberto.dados && <p className="payback-modal__note">Valores estimados, informados no projeto.</p>}
+              {aberto.dados?.some((d) => /\d/.test(d.valor)) && (
+                <p className="payback-modal__note">Valores estimados, informados no projeto.</p>
+              )}
 
               <button
                 type="button"
