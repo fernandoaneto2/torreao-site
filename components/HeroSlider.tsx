@@ -26,6 +26,10 @@ const SLIDES: Slide[] = [
   { type: 'image', src: '/images/hero/carregador-veicular-volvo.jpg', alt: 'Carregador veicular Volvo Enel X com quadro de proteção dedicado', projeto: 'carregador-residencial', position: '32% 50%' },
 ];
 
+// No hero o nome é mais curto: "Geração Fotovoltaica Industrial" → "Solar Industrial".
+// Na seção de payback o título completo é mantido.
+const tituloHero = (titulo: string) => titulo.replace('Geração Fotovoltaica', 'Solar');
+
 /** Tempo de cada slide antes de passar automaticamente. */
 const AUTOPLAY_MS = 6000;
 
@@ -106,7 +110,7 @@ export default function HeroSlider() {
           </div>
 
           <div className="hs-content">
-            <h2 className="hs-title">{getProjeto(s.projeto).titulo}</h2>
+            <h2 className="hs-title">{tituloHero(getProjeto(s.projeto).titulo)}</h2>
             <p className="hs-subtitle">{getProjeto(s.projeto).subtitulo}</p>
             <a
               href={`#projeto-${s.projeto}`}
