@@ -7,7 +7,8 @@ export default function ScrollInit() {
     document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((a) => {
       a.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        if (href && href !== '#') {
+        // #projeto-<slug> é tratado pela seção de payback (rola até o card e o amplia)
+        if (href && href !== '#' && !href.startsWith('#projeto-')) {
           const target = document.querySelector(href) as HTMLElement | null;
           if (target) {
             e.preventDefault();
