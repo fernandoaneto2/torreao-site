@@ -21,6 +21,11 @@ export type Projeto = {
   destaques?: Dado[];
   /** Ficha completa exibida no card ampliado. */
   dados?: Dado[];
+  /**
+   * true = não aparece na seção de payback (projeto aguardando foto/dados).
+   * Continua cadastrado porque os slides do hero usam título e subtítulo dele.
+   */
+  noPayback?: boolean;
 };
 
 export const PROJETOS: Projeto[] = [
@@ -66,7 +71,28 @@ export const PROJETOS: Projeto[] = [
     ],
   },
   {
+    slug: 'residencial-apartamento',
+    categoria: 'Energia Solar',
+    titulo: 'Geração Fotovoltaica Residencial',
+    subtitulo: 'Sistema para cliente morador de apartamento',
+    imagem: '/images/payback/solar-apartamento.jpg',
+    alt: 'Sistema fotovoltaico em telhado cerâmico e em estrutura metálica sobre o estacionamento, vista de drone',
+    descricao:
+      'Execução de sistema fotovoltaico para cliente morador de apartamento. Foram feitas estruturas metálicas para elevação dos módulos e cobertura do estacionamento, viabilizando a geração de energia em um local com pouquíssimo espaço de aproveitamento.',
+    destaques: [
+      { label: 'Estrutura', valor: 'Metálica elevada' },
+      { label: 'Bônus', valor: 'Garagem coberta' },
+    ],
+    dados: [
+      { label: 'Cliente', valor: 'Morador de apartamento' },
+      { label: 'Estrutura', valor: 'Metálica, com elevação dos módulos' },
+      { label: 'Aproveitamento', valor: 'Cobertura do estacionamento' },
+      { label: 'Desafio', valor: 'Pouquíssimo espaço disponível' },
+    ],
+  },
+  {
     slug: 'usina-laje-concreto',
+    noPayback: true,
     categoria: 'Energia Solar',
     titulo: 'Geração Fotovoltaica Industrial',
     subtitulo: 'Usina em solo sobre base de concreto',
@@ -77,6 +103,7 @@ export const PROJETOS: Projeto[] = [
   },
   {
     slug: 'residencial-condominio',
+    noPayback: true,
     categoria: 'Energia Solar',
     titulo: 'Geração Fotovoltaica Residencial',
     subtitulo: 'Sistema em telhado de residência em condomínio',
@@ -87,6 +114,7 @@ export const PROJETOS: Projeto[] = [
   },
   {
     slug: 'cobertura-fibrocimento',
+    noPayback: true,
     categoria: 'Energia Solar',
     titulo: 'Geração Fotovoltaica Industrial',
     subtitulo: 'Sistema em cobertura de fibrocimento',
@@ -97,6 +125,7 @@ export const PROJETOS: Projeto[] = [
   },
   {
     slug: 'carregador-condominio',
+    noPayback: true,
     categoria: 'Carregador Elétrico',
     titulo: 'Carregador Elétrico',
     subtitulo: 'Wallbox em garagem de condomínio',
@@ -107,6 +136,7 @@ export const PROJETOS: Projeto[] = [
   },
   {
     slug: 'carregador-estacionamento',
+    noPayback: true,
     categoria: 'Carregador Elétrico',
     titulo: 'Carregador Elétrico',
     subtitulo: 'Carregador WEG em vaga de estacionamento',
@@ -117,6 +147,7 @@ export const PROJETOS: Projeto[] = [
   },
   {
     slug: 'carregador-residencial',
+    noPayback: true,
     categoria: 'Carregador Elétrico',
     titulo: 'Carregador Elétrico',
     subtitulo: 'Wallbox com quadro de proteção dedicado',
@@ -125,6 +156,9 @@ export const PROJETOS: Projeto[] = [
     descricao: 'Laudo com estudo de carga, projeto, ART e instalação do carregador com quadro de proteção dedicado.',
   },
 ];
+
+/** Projetos exibidos na seção de payback. */
+export const PROJETOS_PAYBACK = PROJETOS.filter((p) => !p.noPayback);
 
 export function getProjeto(slug: string): Projeto {
   const p = PROJETOS.find((x) => x.slug === slug);

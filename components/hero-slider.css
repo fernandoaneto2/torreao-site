@@ -277,3 +277,18 @@
   }
 
 }
+
+/* Tablets: os ícones laterais (14px) são pequenos para o toque; as redes sociais
+   continuam nos botões flutuantes */
+@media (max-width: 1023px) {
+  .hs-side--left { display: none; }
+}
+
+/* PREV/NEXT com área de toque confortável no celular/tablet */
+@media (max-width: 1023px) {
+  .hs-nav {
+    min-width: 40px;
+    min-height: 48px;
+    padding: 0.5rem 0.6rem;
+  }
+}

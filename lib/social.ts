@@ -2,8 +2,8 @@
 // Perfis oficiais confirmados pela Torreão Engenharia.
 export const SOCIAL = {
   whatsapp: 'https://wa.me/5511922763114?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20t%C3%A9cnica%20gratuita',
-  instagram: 'https://www.instagram.com/torreaoengenharia/',
-  facebook: 'https://www.facebook.com/torreaoengenharia',
+  instagram: 'https://www.instagram.com/torreao_engenharia/',
+  facebook: 'https://www.facebook.com/profile.php?id=61595137280223',
 };
 
 export const SOCIAL_ICONS = {

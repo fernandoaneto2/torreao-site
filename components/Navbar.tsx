@@ -12,12 +12,14 @@ const SERVICES = [
   { href: '/servicos/vigilancia',             label: 'Vigilância' },
 ];
 
-export default function Navbar() {
+/** isHome: força o modo da home ou de página interna (ex.: a 404 é gerada com pathname "/"). */
+export default function Navbar({ isHome: isHomeProp }: { isHome?: boolean } = {}) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
-  const base = pathname === '/' ? '' : '/';
+  const isHome = isHomeProp ?? pathname === '/';
+  const base = isHome ? '' : '/';
 
   function openMenu() { setIsOpen(true); document.body.style.overflow = 'hidden'; }
   function closeMenu() { setIsOpen(false); setServicesOpen(false); document.body.style.overflow = ''; }
@@ -31,10 +33,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`navbar${scrolled ? ' scrolled' : ''}${pathname === '/' && !scrolled && !isOpen ? ' navbar--transparent' : ''}`}>
+    <header className={`navbar${scrolled ? ' scrolled' : ''}${isHome && !scrolled && !isOpen ? ' navbar--transparent' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          <a className="logo-link" href={pathname === '/' ? '#inicio' : '/'}>
+          <a className="logo-link" href={isHome ? '#inicio' : '/'}>
             <img
               className="logo"
               src="/images/logo-torreao-banner.png"

@@ -134,7 +134,7 @@
 }
 
 .payback-card__highlight span {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.4px;
   text-transform: uppercase;
@@ -258,6 +258,7 @@
 
 .payback-modal__subtitle {
   margin: 0.35rem 0 1.1rem;
+  text-align: left;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-wine);
@@ -388,4 +389,11 @@
 
 @media (prefers-reduced-motion: reduce) {
   .payback-modal__card { animation: none; }
+}
+
+/* Celulares estreitos (≤ 380px): destaques do card empilhados para não estourar */
+.payback-card__highlight { min-width: 0; }
+
+@media (max-width: 380px) {
+  .payback-card__highlights { grid-template-columns: 1fr; }
 }
