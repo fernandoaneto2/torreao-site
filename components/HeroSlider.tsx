@@ -31,7 +31,7 @@ const SLIDES: Slide[] = [
     alt: 'Usina fotovoltaica em solo vista de drone',
     title: 'Geração Solar em Solo',
     subtitle: 'Título placeholder do projeto',
-    position: '50% 40%',
+    position: '55% 45%',
   },
   {
     type: 'image',
@@ -39,7 +39,7 @@ const SLIDES: Slide[] = [
     alt: 'Painéis solares em telhado residencial ao entardecer',
     title: 'Solar Residencial',
     subtitle: 'Título placeholder do projeto',
-    position: '50% 55%',
+    position: '50% 60%',
   },
   {
     type: 'image',
@@ -47,7 +47,7 @@ const SLIDES: Slide[] = [
     alt: 'Painéis solares instalados em telhado comercial',
     title: 'Solar Comercial',
     subtitle: 'Título placeholder do projeto',
-    position: '50% 45%',
+    position: '40% 50%',
   },
   {
     type: 'image',
@@ -55,7 +55,7 @@ const SLIDES: Slide[] = [
     alt: 'Carregador de veículo elétrico instalado em garagem de condomínio',
     title: 'Recarga Veicular',
     subtitle: 'Título placeholder do projeto',
-    position: '50% 45%',
+    position: '45% 50%',
   },
   {
     type: 'image',
@@ -63,7 +63,7 @@ const SLIDES: Slide[] = [
     alt: 'Carregador veicular WEG instalado na parede',
     title: 'Carregadores Elétricos',
     subtitle: 'Título placeholder do projeto',
-    position: '50% 55%',
+    position: '40% 50%',
   },
   {
     type: 'image',
@@ -71,7 +71,7 @@ const SLIDES: Slide[] = [
     alt: 'Carregador veicular Volvo Enel X com quadro de proteção dedicado',
     title: 'Wallbox Residencial',
     subtitle: 'Título placeholder do projeto',
-    position: '30% 22%',
+    position: '32% 50%',
   },
 ];
 
