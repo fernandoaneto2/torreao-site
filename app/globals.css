@@ -2080,7 +2080,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 2000;
+  z-index: 10000; /* acima da navbar (9999), senão o X fica escondido no celular */
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -2096,6 +2096,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem;
   max-width: 500px;
   width: 100%;
+  max-height: calc(100vh - 40px);
+  max-height: calc(100svh - 40px);
+  overflow-y: auto; /* formulário rola em telas baixas */
   position: relative;
   animation: slideIn 0.3s ease;
 }
