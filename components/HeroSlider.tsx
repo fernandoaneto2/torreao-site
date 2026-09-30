@@ -2,77 +2,28 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import './hero-slider.css';
 import { SOCIAL, SOCIAL_ICONS } from '@/lib/social';
+import { ABRIR_PROJETO_EVENT, getProjeto } from '@/lib/projetos';
 
 type Slide = {
   type: 'image' | 'video';
   src: string;
   poster?: string;
   alt: string;
-  /** Título e subtítulo são placeholders — trocar pelos textos finais de cada projeto. */
-  title: string;
-  subtitle: string;
+  /** Projeto da seção de payback: define título, subtítulo e o card aberto pelo "Saiba mais". */
+  projeto: string;
   /** Enquadramento da mídia (CSS object-position). */
   position?: string;
 };
 
+// O vídeo mostra a mesma usina do projeto "usina-laje-concreto".
 const SLIDES: Slide[] = [
-  {
-    type: 'video',
-    src: '/videos/video-drone-solar.mp4',
-    poster: '/images/hero-solar-poster.jpg',
-    alt: 'Vista aérea de usina solar executada pela Torreão Engenharia',
-    title: 'Usina Solar',
-    subtitle: 'Título placeholder do projeto',
-    position: '35% 75%',
-  },
-  {
-    type: 'image',
-    src: '/images/hero/usina-solar-solo.jpg',
-    alt: 'Usina fotovoltaica em solo vista de drone',
-    title: 'Geração Solar em Solo',
-    subtitle: 'Título placeholder do projeto',
-    position: '55% 45%',
-  },
-  {
-    type: 'image',
-    src: '/images/hero/solar-residencial.jpg',
-    alt: 'Painéis solares em telhado residencial ao entardecer',
-    title: 'Solar Residencial',
-    subtitle: 'Título placeholder do projeto',
-    position: '50% 60%',
-  },
-  {
-    type: 'image',
-    src: '/images/hero/solar-telhado-comercial.jpg',
-    alt: 'Painéis solares instalados em telhado comercial',
-    title: 'Solar Comercial',
-    subtitle: 'Título placeholder do projeto',
-    position: '40% 50%',
-  },
-  {
-    type: 'image',
-    src: '/images/hero/carregador-veicular-garagem.jpg',
-    alt: 'Carregador de veículo elétrico instalado em garagem de condomínio',
-    title: 'Recarga Veicular',
-    subtitle: 'Título placeholder do projeto',
-    position: '45% 50%',
-  },
-  {
-    type: 'image',
-    src: '/images/hero/carregador-veicular-weg.jpg',
-    alt: 'Carregador veicular WEG instalado na parede',
-    title: 'Carregadores Elétricos',
-    subtitle: 'Título placeholder do projeto',
-    position: '40% 50%',
-  },
-  {
-    type: 'image',
-    src: '/images/hero/carregador-veicular-volvo.jpg',
-    alt: 'Carregador veicular Volvo Enel X com quadro de proteção dedicado',
-    title: 'Wallbox Residencial',
-    subtitle: 'Título placeholder do projeto',
-    position: '32% 50%',
-  },
+  { type: 'video', src: '/videos/video-drone-solar.mp4', poster: '/images/hero-solar-poster.jpg', alt: 'Vista aérea de usina solar em solo', projeto: 'usina-laje-concreto', position: '35% 75%' },
+  { type: 'image', src: '/images/hero/usina-solar-solo.jpg', alt: 'Usina fotovoltaica de 91 kWp em solo vista de drone', projeto: 'usina-91kwp', position: '55% 45%' },
+  { type: 'image', src: '/images/hero/solar-residencial.jpg', alt: 'Painéis solares em telhado residencial ao entardecer', projeto: 'residencial-condominio', position: '50% 60%' },
+  { type: 'image', src: '/images/hero/solar-telhado-comercial.jpg', alt: 'Painéis solares em cobertura de fibrocimento', projeto: 'cobertura-fibrocimento', position: '40% 50%' },
+  { type: 'image', src: '/images/hero/carregador-veicular-garagem.jpg', alt: 'Carregador de veículo elétrico em garagem de condomínio', projeto: 'carregador-condominio', position: '45% 50%' },
+  { type: 'image', src: '/images/hero/carregador-veicular-weg.jpg', alt: 'Carregador veicular WEG instalado na parede', projeto: 'carregador-estacionamento', position: '40% 50%' },
+  { type: 'image', src: '/images/hero/carregador-veicular-volvo.jpg', alt: 'Carregador veicular Volvo Enel X com quadro de proteção dedicado', projeto: 'carregador-residencial', position: '32% 50%' },
 ];
 
 /** Tempo de cada slide antes de passar automaticamente. */
@@ -155,9 +106,17 @@ export default function HeroSlider() {
           </div>
 
           <div className="hs-content">
-            <h2 className="hs-title">{s.title}</h2>
-            <p className="hs-subtitle">{s.subtitle}</p>
-            <a href="#payback" className="hs-btn" tabIndex={i === active ? 0 : -1}>
+            <h2 className="hs-title">{getProjeto(s.projeto).titulo}</h2>
+            <p className="hs-subtitle">{getProjeto(s.projeto).subtitulo}</p>
+            <a
+              href={`#projeto-${s.projeto}`}
+              className="hs-btn"
+              tabIndex={i === active ? 0 : -1}
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new CustomEvent(ABRIR_PROJETO_EVENT, { detail: s.projeto }));
+              }}
+            >
               SAIBA MAIS
               <svg viewBox="0 0 8 10" width="7" height="9" aria-hidden="true"><path d="M0 0l8 5-8 5z" fill="currentColor" /></svg>
             </a>
