@@ -51,6 +51,26 @@ export const PROJETOS: Projeto[] = [
     ],
   },
   {
+    slug: 'usina-laje-concreto',
+    categoria: 'Energia Solar',
+    titulo: 'Geração Fotovoltaica Industrial',
+    subtitulo: 'Usina de 76,8 kWp sobre base de concreto',
+    imagem: '/images/hero/usina-solar-laje.jpg',
+    alt: 'Usina fotovoltaica de 76,8 kWp sobre base de concreto, vista de drone',
+    descricao:
+      'Usina fotovoltaica com 126 módulos de 610 W montados sobre base de concreto, somando 76,8 kWp de potência. Geração de 9.991 kWh e economia estimada de R$ 105 mil por ano.',
+    destaques: [
+      { label: 'Potência', valor: '76,8 kWp' },
+      { label: 'Economia/ano', valor: 'R$ 105 mil' },
+    ],
+    dados: [
+      { label: 'Potência de geração', valor: '76,80 kWp' },
+      { label: 'Módulos', valor: '126 de 610 W' },
+      { label: 'Geração', valor: '9.991 kWh' },
+      { label: 'Economia estimada anual', valor: 'R$ 105 mil' },
+    ],
+  },
+  {
     slug: 'residencial-34kwp',
     categoria: 'Energia Solar',
     titulo: 'Geração Fotovoltaica Residencial',
@@ -72,6 +92,7 @@ export const PROJETOS: Projeto[] = [
   },
   {
     slug: 'residencial-apartamento',
+    noPayback: true,
     categoria: 'Energia Solar',
     titulo: 'Geração Fotovoltaica Residencial',
     subtitulo: 'Sistema para cliente morador de apartamento',
@@ -89,17 +110,6 @@ export const PROJETOS: Projeto[] = [
       { label: 'Aproveitamento', valor: 'Cobertura do estacionamento' },
       { label: 'Desafio', valor: 'Pouquíssimo espaço disponível' },
     ],
-  },
-  {
-    slug: 'usina-laje-concreto',
-    noPayback: true,
-    categoria: 'Energia Solar',
-    titulo: 'Geração Fotovoltaica Industrial',
-    subtitulo: 'Usina em solo sobre base de concreto',
-    imagem: '/images/hero/usina-solar-laje.jpg',
-    alt: 'Usina fotovoltaica em solo sobre base de concreto, vista de drone',
-    descricao:
-      'Usina fotovoltaica em solo, com fileiras de módulos montadas sobre base de concreto e área cercada. Projeto, instalação e ART.',
   },
   {
     slug: 'residencial-condominio',
