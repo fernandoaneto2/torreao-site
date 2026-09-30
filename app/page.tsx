@@ -57,6 +57,19 @@ export default function HomePage() {
       {/* Hero */}
       <HeroSlider />
 
+      {/* Metrics strip */}
+      <section className="metrics-strip" aria-label="Números da Torreão Engenharia">
+        <div className="metrics-strip-grid">
+          <div className="metrics-item"><span className="metrics-num">+300</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Projetos elétricos aprovados</span></div>
+          <div className="metrics-item"><span className="metrics-num">+6</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Anos no mercado</span></div>
+          <div className="metrics-item"><span className="metrics-num">+25MW</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Em projetos de conexão</span></div>
+          <div className="metrics-item"><span className="metrics-num">+15</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Cidades atendidas</span></div>
+        </div>
+      </section>
+
+      {/* Payback */}
+      <PaybackSection />
+
       {/* Partners Marquee */}
       <section className="partners-marquee">
         <div className="marquee-track">
@@ -91,19 +104,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Payback */}
-      <PaybackSection />
-
-      {/* Metrics strip */}
-      <section className="metrics-strip" aria-label="Números da Torreão Engenharia">
-        <div className="metrics-strip-grid">
-          <div className="metrics-item"><span className="metrics-num">+300</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Projetos elétricos aprovados</span></div>
-          <div className="metrics-item"><span className="metrics-num">+6</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Anos no mercado</span></div>
-          <div className="metrics-item"><span className="metrics-num">+25MW</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Em projetos de conexão</span></div>
-          <div className="metrics-item"><span className="metrics-num">+15</span><span className="metrics-bar" aria-hidden="true" /><span className="metrics-lbl">Cidades atendidas</span></div>
         </div>
       </section>
 
