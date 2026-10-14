@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
 import UtmInit from '@/components/UtmInit';
 import CookieBanner from '@/components/CookieBanner';
+import { SITE_URL } from '@/lib/site';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -19,6 +20,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  // Torna absolutos os links canônicos e as imagens de compartilhamento (antes saíam como localhost:3000)
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Torreão Engenharia — Projetos Elétricos, SPDA e Laudos NR-10',
     template: '%s | Torreão Engenharia',
